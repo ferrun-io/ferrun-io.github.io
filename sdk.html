@@ -1,15 +1,13 @@
 <!doctype html>
-<!-- Plain HTML keeps the guide usable without scripts or source-repository access. -->
 <html lang="en">
   <head>
-    <!-- Relative navigation and one stylesheet work on the public Pages address. -->
+    <!-- Relative links support both local previews and GitHub Pages project paths. -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ferrun SDKs</title>
     <link rel="stylesheet" href="site.css" />
   </head>
   <body>
-    <!-- Shared navigation preserves orientation without custom controls. -->
     <header>
       <nav aria-label="Main navigation">
         <a href="index.html">Downloads</a>
@@ -17,67 +15,42 @@
         <a href="sdk.html" aria-current="page">SDKs</a>
       </nav>
     </header>
+    <!-- Keep package availability explicit before an example that needs the development SDK. -->
     <main>
-      <!-- Make package availability explicit before showing authoring concepts. -->
       <h1>SDKs</h1>
       <p>
-        Rust, Python, and TypeScript authors share one Rust graph validator and GitHub
-        Actions compiler.
+        The development SDKs let you define GitHub Actions workflows in Rust, Python, or
+        TypeScript.
       </p>
+      <p>SDK packages are not available for download yet.</p>
+      <h2>Python example</h2>
       <p>
-        <strong>Public SDK packages are not available yet.</strong> This is a locally
-        checked authoring sample, not qualified native CI execution.
+        This example shows how one job passes a revision ID to another. When the second
+        job uses the first job’s output, the SDK adds the dependency automatically.
       </p>
-      <section>
-        <h2>What works in the sample</h2>
-        <p>
-          Define manual dispatch inputs, jobs, shell steps, environment bindings, and
-          typed string outputs. A consumer’s reference to a producer output creates the
-          dependency automatically. Python and TypeScript interfaces are generated from
-          the Ferrun-owned Rust contract.
-        </p>
-        <p>
-          All three language examples produce identical GitHub Actions YAML through real
-          native adapters. Local checks cover types, output handoff, generation drift,
-          and accepted and rejected target boundaries.
-        </p>
-      </section>
-      <!-- This bounded example describes composition; it is not an installation command. -->
-      <section>
-        <h2>Python authoring shape</h2>
-        <pre><code># Import the generated builder after the SDK is provided by your development setup.
-from ferrun_pipeline import Pipeline
+      <p>The example requires the development SDK.</p>
+      <pre><code>from ferrun_pipeline import Pipeline
 
-# The operator supplies the label of registered execution capacity.
-pipeline = Pipeline("Build and verify")
-runner = pipeline.input("pool_label", "Explicit executor pool label")
+# Ask for the registered runner’s label when the workflow is started.
+pipeline = Pipeline("Pass a revision between jobs")
+runner = pipeline.input("pool_label", "Runner label for these jobs")
 
-# Export a real step output as a typed producer reference.
-build = pipeline.job("build", runner)
-build.run("result", 'echo "revision=$GITHUB_SHA" &gt;&gt; "$GITHUB_OUTPUT"')
-revision = build.output("revision", "result")
+# Export the first job’s revision ID so another job can use it.
+publish = pipeline.job("publish", runner)
+publish.run("result", 'echo "revision=$GITHUB_SHA" &gt;&gt; "$GITHUB_OUTPUT"')
+revision = publish.output("revision", "result")
 
-# Rust derives the dependency from the value the verifier consumes.
-verify = pipeline.job("verify", runner)
-verify.run("check", 'test -n "$REVISION"', env={"REVISION": revision})
+# Using the output makes this job wait for the first job.
+check = pipeline.job("check", runner)
+check.run("verify", 'test -n "$REVISION"', env={"REVISION": revision})
 
-# Compilation returns YAML; it does not dispatch or execute a workflow.
+# Print the generated workflow for inspection before installing it.
 print(pipeline.compile_github_actions())</code></pre>
-      </section>
-      <section>
-        <h2>Execution boundaries</h2>
-        <p>
-          GitHub owns job scheduling for the compiled workflow. Runner labels select
-          registered capacity; they do not provision an operating system. Native Ferrun
-          function scheduling, programmable caches, distribution, and adaptive placement
-          remain designs.
-        </p>
-        <p>
-          The generated sample workflows have not been qualified live against GitHub.
-          Public package downloads will require their own versioned inventory, native
-          binding coverage, and verification evidence.
-        </p>
-      </section>
+      <p>
+        Compiling returns a GitHub Actions workflow; it does not run the jobs. A runner
+        label selects an existing runner.
+      </p>
+      <p>The generated workflow’s execution on GitHub has not been verified.</p>
     </main>
   </body>
 </html>

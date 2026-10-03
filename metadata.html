@@ -1,15 +1,13 @@
 <!doctype html>
-<!-- Plain HTML keeps the guide usable without scripts or source-repository access. -->
 <html lang="en">
   <head>
-    <!-- Relative navigation and one stylesheet work on the public Pages address. -->
+    <!-- Relative links support both local previews and GitHub Pages project paths. -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Release catalog</title>
+    <title>JSON field reference</title>
     <link rel="stylesheet" href="site.css" />
   </head>
   <body>
-    <!-- Shared navigation preserves orientation without custom controls. -->
     <header>
       <nav aria-label="Main navigation">
         <a href="index.html">Downloads</a>
@@ -17,58 +15,60 @@
         <a href="sdk.html">SDKs</a>
       </nav>
     </header>
+    <!-- Field names are API identifiers and must remain unchanged. -->
     <main>
-      <!-- Each field describes identity or evidence, without granting execution eligibility. -->
-      <h1>Release catalog</h1>
-      <p>Read <a href="releases.json">releases.json</a> for the displayed release.</p>
+      <h1>JSON field reference</h1>
+      <p>
+        <a href="releases.json">releases.json</a> lists this release’s downloads,
+        checksums, and test results.
+      </p>
       <dl>
         <dt><code>/format</code></dt>
-        <dd>Catalog schema version. This reference describes version 1.</dd>
+        <dd>The format version of the JSON catalog. This page describes version 1.</dd>
         <dt><code>/distribution_repository</code></dt>
-        <dd>
-          Public repository serving the bundles; distinct from their source repository.
-        </dd>
+        <dd>The public GitHub repository that hosts the downloads.</dd>
         <dt><code>/tag</code></dt>
-        <dd>Exact version tag used in all asset URLs.</dd>
+        <dd>The release tag used in the download URLs.</dd>
         <dt><code>/source_commit</code></dt>
-        <dd>
-          Immutable implementation identity recorded in the build inventory and
-          manifests.
-        </dd>
+        <dd>The Git commit used to build the release.</dd>
         <dt><code>/runner_version</code></dt>
-        <dd>
-          Recorded GitHub runner compatibility pin; not proof of service compatibility.
-        </dd>
+        <dd>The GitHub runner version selected when the release was built.</dd>
         <dt><code>/live_qualification_passed</code></dt>
         <dd>
-          False for this build/test preview. Do not treat it as an approved customer
-          trial release.
+          Whether the release passed the GitHub Actions compatibility checks. It is
+          false for this release.
         </dd>
         <dt><code>/release_url</code></dt>
-        <dd>Public release notes and asset listing.</dd>
+        <dd>The release page with its notes and downloads.</dd>
         <dt><code>/metadata_url</code></dt>
         <dd>
-          Unmodified original build inventory, including its source repository
-          attribution.
+          The original release.json file, copied without changes from the build
+          repository.
         </dd>
         <dt><code>/targets/*/target</code></dt>
         <dd>
-          Native Rust target. Select only the computer’s actual OS and architecture.
+          The operating system and processor identifier, such as
+          aarch64-unknown-linux-gnu for Linux ARM64.
         </dd>
         <dt><code>/targets/*/platform</code></dt>
-        <dd>Readable platform label for the same target.</dd>
+        <dd>The readable name of the same operating system and processor.</dd>
         <dt><code>/targets/*/archive</code></dt>
-        <dd>Exact flat asset name; not a source-code archive.</dd>
+        <dd>The download’s filename, without directory names.</dd>
         <dt><code>/targets/*/sha256</code></dt>
-        <dd>SHA-256 of the complete compressed archive, including its manifest.</dd>
+        <dd>
+          The SHA-256 checksum of the complete downloaded archive, including its
+          manifest.
+        </dd>
         <dt><code>/targets/*/bytes</code></dt>
-        <dd>Compressed download size in bytes.</dd>
+        <dd>The download size in bytes.</dd>
         <dt><code>/targets/*/download_url</code></dt>
-        <dd>Public bundle URL requiring no source repository credentials.</dd>
+        <dd>The download URL. No private repository credentials are needed.</dd>
         <dt><code>/targets/*/checksum_url</code></dt>
-        <dd>Matching sidecar checksum file.</dd>
+        <dd>The separate checksum file for this download.</dd>
         <dt><code>/targets/*/tests_url</code></dt>
-        <dd>Native test report bound to the same source and archive digest.</dd>
+        <dd>
+          The test report identifying the same source commit and download checksum.
+        </dd>
       </dl>
     </main>
   </body>
