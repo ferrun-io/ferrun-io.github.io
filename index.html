@@ -1,0 +1,125 @@
+<!doctype html>
+<!-- The download task stays usable without JavaScript or account access. -->
+<html lang="en">
+  <head>
+    <!-- Project-relative assets work on GitHub Pages project paths and custom domains. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ferrun preview releases, checksums, installation guides, and typed pipeline SDK documentation."
+    />
+    <meta name="color-scheme" content="dark" />
+    <title>Downloads · Ferrun</title>
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="site.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+    <!-- Keyboard users can reach the release inventory without traversing navigation. -->
+    <a class="skip" href="#main">Skip to downloads</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Ferrun downloads"
+        ><svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M12 10h40l-8 8H20v12h25l-8 8H20v16h-8z" /></svg
+        >Ferrun</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Downloads</a
+        ><a href="install.html">Install</a><a href="sdk.html">SDKs</a>
+      </nav>
+    </header>
+    <main id="main">
+      <!-- Availability and qualification are separate decisions visible before downloading. -->
+      <div class="page-heading">
+        <p class="eyebrow">Releases</p>
+        <h1>Get Ferrun.</h1>
+        <p class="lede">Run supported GitHub Actions jobs on your own hardware.</p>
+      </div>
+      <section class="release" aria-labelledby="release-title">
+        <div class="release-heading">
+          <div>
+            <h2 id="release-title">v0.0.1</h2>
+            <p>Native build and test preview</p>
+          </div>
+          <span class="badge">Preview</span>
+        </div>
+        <div class="notice">
+          <strong>Build/test preview. Live GitHub qualification is pending.</strong>
+          <p>
+            Native checks passed. Use for evaluation; these archives are not approved
+            for customer trials.
+          </p>
+        </div>
+        <!-- Native architecture requires explicit confirmation; browser hints cannot establish it. -->
+        <div class="platform-filter" hidden>
+          <label for="platform">Your native platform</label
+          ><select id="platform">
+            <option value="all">Show every available bundle</option>
+            <option value="aarch64-apple-darwin">macOS · Apple silicon</option>
+            <option value="x86_64-apple-darwin">macOS · Intel</option>
+            <option value="aarch64-unknown-linux-gnu">Linux · ARM64</option>
+            <option value="x86_64-unknown-linux-gnu">Linux · x64</option>
+            <option value="aarch64-pc-windows-msvc">Windows · ARM64</option>
+            <option value="x86_64-pc-windows-msvc">Windows · x64</option>
+          </select>
+          <p>
+            Confirm the computer’s native architecture; terminals may run under
+            emulation.
+          </p>
+        </div>
+        <p id="unavailable" class="notice" role="status" hidden>
+          This release has no bundle for the selected platform. Choose another release
+          when a matching bundle is published.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <caption class="sr-only">
+              Available native preview bundles
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Platform</th>
+                <th scope="col">Bundle</th>
+                <th scope="col">Verification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-target="aarch64-unknown-linux-gnu"><th scope="row">Linux · ARM64</th><td><a class="download" href="https://github.com/varunchopra/ferrun/releases/download/v0.0.1/ferrun-v0.0.1-aarch64-unknown-linux-gnu.tar.gz">Download preview</a><span class="file-size">10.1 MB</span></td><td><a href="https://github.com/varunchopra/ferrun/releases/download/v0.0.1/ferrun-v0.0.1-aarch64-unknown-linux-gnu.tar.gz.sha256">Checksum</a> · <a href="https://github.com/varunchopra/ferrun/releases/download/v0.0.1/linux-arm64-tests.json">Test evidence</a></td></tr>
+<tr data-target="aarch64-pc-windows-msvc"><th scope="row">Windows · ARM64</th><td><a class="download" href="https://github.com/varunchopra/ferrun/releases/download/v0.0.1/ferrun-v0.0.1-aarch64-pc-windows-msvc.zip">Download preview</a><span class="file-size">9.1 MB</span></td><td><a href="https://github.com/varunchopra/ferrun/releases/download/v0.0.1/ferrun-v0.0.1-aarch64-pc-windows-msvc.zip.sha256">Checksum</a> · <a href="https://github.com/varunchopra/ferrun/releases/download/v0.0.1/windows-arm64-tests.json">Test evidence</a></td></tr>
+<tr data-target="aarch64-apple-darwin"><th scope="row">macOS · Apple silicon</th><td><a class="download" href="https://github.com/varunchopra/ferrun/releases/download/v0.0.1/ferrun-v0.0.1-aarch64-apple-darwin.tar.gz">Download preview</a><span class="file-size">9.2 MB</span></td><td><a href="https://github.com/varunchopra/ferrun/releases/download/v0.0.1/ferrun-v0.0.1-aarch64-apple-darwin.tar.gz.sha256">Checksum</a> · <a href="https://github.com/varunchopra/ferrun/releases/download/v0.0.1/macos-arm64-tests.json">Test evidence</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="release-links">
+          <a href="install.html">Verify and install a bundle</a
+          ><a href="https://github.com/varunchopra/ferrun/releases/tag/v0.0.1">Release assets and notes</a
+          ><a href="https://github.com/varunchopra/ferrun/releases/download/v0.0.1/release.json">Build inventory</a>
+        </div>
+      </section>
+      <!-- The public catalog is a data interface for tools, not a second support claim. -->
+      <div class="secondary-grid">
+        <section>
+          <h2>For your agent</h2>
+          <p>
+            The <a href="releases.json">release catalog</a> lists exact platform
+            targets, archive digests, and evidence links. Read the
+            <a href="metadata.html">field reference</a>. No source repository access is
+            required.
+          </p>
+        </section>
+        <section>
+          <h2>Typed pipeline authoring</h2>
+          <p>
+            Explore the Rust, Python, and TypeScript <a href="sdk.html">SDK preview</a>.
+            Package installation and native CI execution have separate release
+            requirements.
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <span>Ferrun</span><span>Verify the release. Keep the complete bundle.</span>
+    </footer>
+  </body>
+</html>

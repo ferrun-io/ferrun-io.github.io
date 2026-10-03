@@ -1,0 +1,184 @@
+<!doctype html>
+<!-- Instructions describe the selected package without requiring private source access. -->
+<html lang="en">
+  <head>
+    <!-- Keep every local route independent of its GitHub Pages repository prefix. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Verify a Ferrun preview bundle and choose company server or employee executor setup."
+    />
+    <meta name="color-scheme" content="dark" />
+    <title>Install · Ferrun</title>
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="site.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+    <!-- The same navigation and landmarks preserve orientation across the portal. -->
+    <a class="skip" href="#main">Skip to installation</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Ferrun downloads"
+        ><svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M12 10h40l-8 8H20v12h25l-8 8H20v16h-8z" /></svg
+        >Ferrun</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="index.html">Downloads</a
+        ><a href="install.html" aria-current="page">Install</a
+        ><a href="sdk.html">SDKs</a>
+      </nav>
+    </header>
+    <main id="main" class="guide">
+      <!-- Start with the exact installation route and its material eligibility boundary. -->
+      <div class="page-heading">
+        <p class="eyebrow">Installation</p>
+        <h1>Verify before you run.</h1>
+        <p class="lede">Native bundles need neither Rust nor Python.</p>
+      </div>
+      <div class="notice">
+        <strong>v0.0.1 is a build and test preview.</strong>
+        <p>
+          These archives have not passed live GitHub compatibility qualification.
+          Installation does not establish supported workflow execution.
+        </p>
+      </div>
+      <section>
+        <h2>1. Match your machine</h2>
+        <p>
+          Choose an archive from <a href="index.html">Downloads</a> for the computer’s
+          native OS and architecture. On Linux, run <code>uname -m</code>. On macOS,
+          check Apple menu → About This Mac. On Windows, check Settings → System → About
+          → System type.
+        </p>
+        <p>
+          Download the archive and its matching <code>.sha256</code> file into the same
+          folder. Do not use GitHub’s source-code archives.
+        </p>
+      </section>
+      <!-- Checksums verify bytes; no command bypasses operating-system approval. -->
+      <section>
+        <h2>2. Check and extract</h2>
+        <p>
+          Open the commands for your native platform. Run them from the folder
+          containing the archive and its matching checksum file. A failed platform or
+          checksum check stops extraction.
+        </p>
+        <details><summary>Linux · ARM64</summary><div class="code-block"><button class="copy" type="button" hidden>Copy commands</button><pre><code># A subshell stops at any failure without changing your shell settings.
+(
+    set -eu
+    # Detect the hardware architecture even when macOS uses Rosetta.
+    test &quot;$(uname -s)&quot; = &#x27;Linux&#x27;
+    native_arch=&quot;$(uname -m)&quot;
+    test &quot;$native_arch&quot; = &#x27;aarch64&#x27;
+    # Verify the exact release archive before extracting executable content.
+    archive=&#x27;ferrun-v0.0.1-aarch64-unknown-linux-gnu.tar.gz&#x27;
+    sha256sum -c &quot;$archive.sha256&quot;
+    # Keep this complete bundle separate from any existing extraction.
+    bundle_dir=&quot;${archive%.tar.gz}&quot;
+    mkdir &quot;$bundle_dir&quot;
+    tar -xzf &quot;$archive&quot; -C &quot;$bundle_dir&quot;
+    cd &quot;$bundle_dir&quot;
+    # Identify the program without configuring services or enrolling a machine.
+    ./ferrun --version
+)</code></pre></div></details>
+<details><summary>Windows · ARM64</summary><p>First install Microsoft’s supported <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist">Visual C++ v14 Redistributable</a> for this native architecture. Complete any requested restart.</p><div class="code-block"><button class="copy" type="button" hidden>Copy commands</button><pre><code># Reject a different operating system or native architecture.
+if ([Environment]::OSVersion.Platform -ne &#x27;Win32NT&#x27;) {
+    throw &#x27;Select a release bundle for this operating system&#x27;
+}
+if ([Runtime.InteropServices.RuntimeInformation]::OSArchitecture.ToString() -ne &#x27;Arm64&#x27;) {
+    throw &#x27;Select a release bundle for the native Windows architecture&#x27;
+}
+# Verify the archive before extraction; the digest binds the exact downloaded bytes.
+$archive = &#x27;ferrun-v0.0.1-aarch64-pc-windows-msvc.zip&#x27;
+$expected = ((Get-Content &quot;$archive.sha256&quot; -Raw).Trim() -split &#x27;\s+&#x27;)[0]
+if ((Get-FileHash $archive -Algorithm SHA256).Hash -ne $expected) {
+    throw &#x27;Archive checksum does not match&#x27;
+}
+# Refuse to overlay a previous installation, retaining the complete bundle.
+$bundleDir = [IO.Path]::GetFileNameWithoutExtension($archive)
+if (Test-Path $bundleDir) { throw &#x27;Choose an empty destination&#x27; }
+Expand-Archive -Path $archive -DestinationPath $bundleDir
+Set-Location $bundleDir
+# Identify the program without configuring services or enrolling a machine.
+.\ferrun.exe --version</code></pre></div></details>
+<details><summary>macOS · Apple silicon</summary><div class="code-block"><button class="copy" type="button" hidden>Copy commands</button><pre><code># A subshell stops at any failure without changing your shell settings.
+(
+    set -eu
+    # Detect the hardware architecture even when macOS uses Rosetta.
+    test &quot;$(uname -s)&quot; = &#x27;Darwin&#x27;
+    native_arch=&quot;$(uname -m)&quot;
+    if [ &quot;$(sysctl -in hw.optional.arm64 2&gt;/dev/null || printf 0)&quot; = 1 ]; then
+        native_arch=arm64
+    fi
+    test &quot;$native_arch&quot; = &#x27;arm64&#x27;
+    # Verify the exact release archive before extracting executable content.
+    archive=&#x27;ferrun-v0.0.1-aarch64-apple-darwin.tar.gz&#x27;
+    shasum -a 256 -c &quot;$archive.sha256&quot;
+    # Keep this complete bundle separate from any existing extraction.
+    bundle_dir=&quot;${archive%.tar.gz}&quot;
+    mkdir &quot;$bundle_dir&quot;
+    tar -xzf &quot;$archive&quot; -C &quot;$bundle_dir&quot;
+    cd &quot;$bundle_dir&quot;
+    # Identify the program without configuring services or enrolling a machine.
+    ./ferrun --version
+)</code></pre></div></details>
+        <p>
+          The reported version must match the selected release. Keep
+          <code>ferrun</code>, <code>control-plane</code>, <code>executor</code>, the
+          manifest, notices, and documentation together. Use your administrator’s normal
+          approval process if endpoint policy blocks a verified executable.
+        </p>
+      </section>
+      <!-- Roles explain real prerequisite and credential boundaries before configuration. -->
+      <section>
+        <h2>3. Choose the setup role</h2>
+        <div class="role">
+          <h3>Employee executor</h3>
+          <p>
+            Your operator supplies an HTTPS control-plane URL, pool ID, and pool
+            enrollment credential. Install Git and Node 24; Node 20 actions also need
+            Node 20. Supply the credential through <code>FERRUN_ENROLLMENT_TOKEN</code>,
+            then use <code>ferrun setup --server</code> and <code>ferrun run</code> as
+            described in the bundle’s company setup guide.
+          </p>
+          <p>
+            This role needs no GitHub App key, management token, database, or private
+            source repository access.
+          </p>
+        </div>
+        <div class="role">
+          <h3>Company or personal control plane</h3>
+          <p>
+            An administrator supplies an authorized GitHub App, its private key,
+            approved repositories, and PostgreSQL or Docker. Remote executors also need
+            an HTTPS endpoint managed by the operator. Follow the bundle’s company and
+            GitHub App setup guides.
+          </p>
+        </div>
+        <p>
+          Open <code>docs/company-setup.md</code> from the extracted bundle for the
+          supported setup commands. Read <code>docs/runtime.md</code> for workflow
+          restrictions. A managed customer trial connection is not included in a
+          download.
+        </p>
+      </section>
+      <section>
+        <h2>4. Verify real work</h2>
+        <p>
+          Use a trusted workflow and confirm its GitHub run URL, runner identity,
+          conclusion, and stored logs. Enrollment and a running process do not prove
+          workflow compatibility. Jobs run as the executor’s OS user without workload
+          isolation.
+        </p>
+        <p>
+          Stop while idle with Ctrl-C. Keep private installation state for restart;
+          repeating <code>ferrun run</code> reuses the saved executor identity.
+        </p>
+      </section>
+    </main>
+    <footer><span>Ferrun</span><a href="index.html">Back to downloads</a></footer>
+    <p id="copy-status" class="sr-only" role="status" aria-live="polite"></p>
+  </body>
+</html>

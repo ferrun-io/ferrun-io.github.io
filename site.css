@@ -1,0 +1,466 @@
+/* Self-hosted licensed fonts preserve the existing Ferrun identity. */
+@font-face {
+  font-family: Geist;
+  src: url('assets/fonts/geist-sans.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('assets/fonts/geist-mono.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* A single restrained column puts releases ahead of promotional content. */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--foreground);
+  font:
+    400 1rem/1.65 Geist,
+    system-ui,
+    sans-serif;
+}
+main,
+.site-header,
+footer {
+  width: min(65rem, calc(100% - 3rem));
+  margin-inline: auto;
+}
+main {
+  padding-block: 4rem;
+}
+a {
+  color: var(--accent);
+  text-underline-offset: 0.25em;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Navigation remains compact and uses visible current-page text as feedback. */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 6rem;
+  padding-block: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--foreground);
+  font-size: 1.5rem;
+  font-weight: 560;
+  letter-spacing: -0.035em;
+  text-decoration: none;
+}
+.brand svg {
+  width: 1.65rem;
+  height: 1.65rem;
+  fill: var(--accent);
+}
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+nav a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+  text-decoration: none;
+}
+nav a[aria-current] {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
+/* Typography separates the primary task, section decisions, and supporting evidence. */
+.page-heading {
+  margin-bottom: 2.75rem;
+  max-width: 48rem;
+}
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.875rem;
+  margin: 0 0 0.75rem;
+}
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 530;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  margin: 0 0 1.25rem;
+}
+h2 {
+  font-size: 1.375rem;
+  font-weight: 540;
+  line-height: 1.4;
+  margin: 0 0 0.65rem;
+}
+h3 {
+  font-size: 1.05rem;
+  font-weight: 580;
+  margin: 0 0 0.5rem;
+}
+p {
+  margin: 0 0 1rem;
+}
+.lede {
+  font-size: 1.125rem;
+  color: var(--muted);
+}
+strong {
+  font-weight: 600;
+}
+
+/* Qualification stays adjacent to the inventory it actually describes. */
+.release {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--surface);
+}
+.release-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.75rem 2rem;
+}
+.release-heading h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+.release-heading p {
+  color: var(--muted);
+  margin: 0;
+}
+.badge {
+  padding: 0.25rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  font-size: 0.875rem;
+}
+.notice {
+  border-left: 2px solid var(--accent);
+  padding: 1rem 1.25rem;
+  background: var(--canvas);
+  margin-bottom: 1.5rem;
+}
+.notice p {
+  color: var(--muted);
+  margin: 0.35rem 0 0;
+}
+.release .notice {
+  margin-inline: 2rem;
+}
+
+/* Explicit platform selection handles unsupported releases without hiding the fallback inventory. */
+.platform-filter {
+  margin: 1.75rem 2rem;
+}
+label {
+  display: block;
+  font-weight: 530;
+  margin-bottom: 0.5rem;
+}
+select {
+  min-height: 44px;
+  width: min(100%, 24rem);
+  padding: 0.6rem 0.75rem;
+  background: var(--canvas);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  font: inherit;
+}
+.platform-filter p {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin: 0.6rem 0 0;
+  max-width: 44rem;
+}
+.table-wrap {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+thead th {
+  font-size: 0.875rem;
+  color: var(--muted);
+  font-weight: 450;
+}
+th,
+td {
+  padding: 1.15rem 2rem;
+  border-top: 1px solid var(--border);
+}
+tbody th {
+  font-weight: 500;
+}
+td {
+  white-space: nowrap;
+}
+.download {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 520;
+}
+.file-size {
+  display: block;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+.release-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Supporting docs use the same surface rhythm without competing with downloads. */
+.secondary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.secondary-grid p {
+  color: var(--muted);
+}
+.guide {
+  max-width: 50rem;
+}
+.guide table td {
+  white-space: normal;
+}
+.guide table th code {
+  overflow-wrap: anywhere;
+}
+.guide section {
+  margin-top: 2.5rem;
+}
+.guide section > p,
+.role p {
+  color: var(--muted);
+}
+.role {
+  margin-top: 1.5rem;
+}
+details {
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+summary {
+  cursor: pointer;
+  padding: 0.9rem 1.15rem;
+  min-height: 44px;
+  font-weight: 520;
+}
+details > p {
+  padding: 0 1.15rem;
+}
+.code-block {
+  position: relative;
+  background: var(--surface);
+  border-radius: 0.6rem;
+  padding: 3.25rem 1.25rem 1.25rem;
+}
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+code {
+  font:
+    400 0.875rem/1.8 'Geist Mono',
+    ui-monospace,
+    monospace;
+}
+p code {
+  color: var(--foreground);
+  overflow-wrap: anywhere;
+}
+.copy {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.75rem;
+  min-height: 44px;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.35rem;
+  font: inherit;
+  font-size: 0.875rem;
+  color: var(--foreground);
+  background: var(--surface);
+  cursor: pointer;
+}
+.copy:hover {
+  background: var(--surface-hover);
+}
+.flow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.flow-value {
+  color: var(--accent);
+  font-size: 0.875rem;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--border);
+  padding-block: 1.5rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+/* Skip links and status messages expose equivalent access to keyboard and screen-reader users. */
+.sr-only,
+.skip:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.skip:focus {
+  position: fixed;
+  z-index: 2;
+  top: 1rem;
+  left: 1rem;
+  background: var(--surface);
+  padding: 1rem;
+}
+
+/* Narrow and landscape layouts retain readable evidence and full touch targets. */
+@media (max-width: 640px) {
+  main,
+  .site-header,
+  footer {
+    width: calc(100% - 2rem);
+  }
+  main {
+    padding-block: 2.5rem;
+  }
+  .site-header {
+    gap: 1rem;
+    min-height: 5rem;
+  }
+  nav {
+    gap: 0.85rem;
+    font-size: 0.875rem;
+  }
+  .brand {
+    font-size: 1.2rem;
+  }
+  .brand svg {
+    width: 1.35rem;
+  }
+  .release-heading {
+    padding: 1.25rem;
+  }
+  .release .notice {
+    margin-inline: 1.25rem;
+  }
+  .platform-filter {
+    margin: 1.25rem;
+  }
+  th,
+  td {
+    padding: 0.9rem 1.25rem;
+  }
+  table,
+  tbody,
+  tbody tr,
+  tbody th,
+  tbody td {
+    display: block;
+  }
+  thead {
+    position: absolute;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  tbody tr {
+    border-top: 1px solid var(--border);
+    padding: 0.25rem 0 1rem;
+  }
+  tbody th,
+  tbody td {
+    border: 0;
+    padding-block: 0.35rem;
+    white-space: normal;
+  }
+  .file-size {
+    display: inline;
+    margin-left: 0.75rem;
+  }
+  .release-links {
+    padding: 1.25rem;
+  }
+  .secondary-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .flow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer {
+    flex-direction: column;
+  }
+}
+
+/* System contrast replaces ambient branding with accessible native boundaries. */
+@media (forced-colors: active) {
+  .release,
+  details,
+  .flow,
+  .notice,
+  button,
+  select {
+    border: 1px solid CanvasText;
+  }
+  .brand svg {
+    fill: CanvasText;
+  }
+}

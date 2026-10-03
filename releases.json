@@ -1,0 +1,42 @@
+{
+  "format": 1,
+  "distribution_repository": "varunchopra/ferrun",
+  "tag": "v0.0.1",
+  "source_commit": "ce500f003557603f60c5cc0a3c5d1acb3b40b349",
+  "runner_version": "2.337.0",
+  "live_qualification_passed": false,
+  "release_url": "https://github.com/varunchopra/ferrun/releases/tag/v0.0.1",
+  "metadata_url": "https://github.com/varunchopra/ferrun/releases/download/v0.0.1/release.json",
+  "targets": [
+    {
+      "target": "aarch64-unknown-linux-gnu",
+      "platform": "Linux \u00b7 ARM64",
+      "archive": "ferrun-v0.0.1-aarch64-unknown-linux-gnu.tar.gz",
+      "sha256": "b25447e4a53309447fc093ed061acf6046ea2e1d2e653a3ccd657cfbd7d437dd",
+      "bytes": 10633944,
+      "download_url": "https://github.com/varunchopra/ferrun/releases/download/v0.0.1/ferrun-v0.0.1-aarch64-unknown-linux-gnu.tar.gz",
+      "checksum_url": "https://github.com/varunchopra/ferrun/releases/download/v0.0.1/ferrun-v0.0.1-aarch64-unknown-linux-gnu.tar.gz.sha256",
+      "tests_url": "https://github.com/varunchopra/ferrun/releases/download/v0.0.1/linux-arm64-tests.json"
+    },
+    {
+      "target": "aarch64-pc-windows-msvc",
+      "platform": "Windows \u00b7 ARM64",
+      "archive": "ferrun-v0.0.1-aarch64-pc-windows-msvc.zip",
+      "sha256": "90d3075016ea783f64f1e0457ec2397a53aed8e19e35b5add5a5d03aeb55e723",
+      "bytes": 9551297,
+      "download_url": "https://github.com/varunchopra/ferrun/releases/download/v0.0.1/ferrun-v0.0.1-aarch64-pc-windows-msvc.zip",
+      "checksum_url": "https://github.com/varunchopra/ferrun/releases/download/v0.0.1/ferrun-v0.0.1-aarch64-pc-windows-msvc.zip.sha256",
+      "tests_url": "https://github.com/varunchopra/ferrun/releases/download/v0.0.1/windows-arm64-tests.json"
+    },
+    {
+      "target": "aarch64-apple-darwin",
+      "platform": "macOS \u00b7 Apple silicon",
+      "archive": "ferrun-v0.0.1-aarch64-apple-darwin.tar.gz",
+      "sha256": "5b984670f0d70bf22111c8fb74d16abbb96b8fc13d1d888fb21bce15581fb1e6",
+      "bytes": 9629815,
+      "download_url": "https://github.com/varunchopra/ferrun/releases/download/v0.0.1/ferrun-v0.0.1-aarch64-apple-darwin.tar.gz",
+      "checksum_url": "https://github.com/varunchopra/ferrun/releases/download/v0.0.1/ferrun-v0.0.1-aarch64-apple-darwin.tar.gz.sha256",
+      "tests_url": "https://github.com/varunchopra/ferrun/releases/download/v0.0.1/macos-arm64-tests.json"
+    }
+  ]
+}

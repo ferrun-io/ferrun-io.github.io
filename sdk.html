@@ -1,0 +1,113 @@
+<!doctype html>
+<!-- Document the working authoring sample without inventing registry packages. -->
+<html lang="en">
+  <head>
+    <!-- SDK docs share the same self-hosted assets as release and installation pages. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ferrun typed pipeline SDK preview: Rust, Python, and TypeScript authoring through one Rust compiler."
+    />
+    <meta name="color-scheme" content="dark" />
+    <title>SDKs · Ferrun</title>
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="site.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+    <!-- Current-page labels and skip links keep the documentation navigable. -->
+    <a class="skip" href="#main">Skip to SDK documentation</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Ferrun downloads"
+        ><svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M12 10h40l-8 8H20v12h25l-8 8H20v16h-8z" /></svg
+        >Ferrun</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="index.html">Downloads</a><a href="install.html">Install</a
+        ><a href="sdk.html" aria-current="page">SDKs</a>
+      </nav>
+    </header>
+    <main id="main" class="guide">
+      <!-- Make package availability explicit before showing authoring concepts. -->
+      <div class="page-heading">
+        <p class="eyebrow">SDK preview</p>
+        <h1>Connect work with typed data.</h1>
+        <p class="lede">
+          Rust, Python, and TypeScript authors share one Rust graph validator and GitHub
+          Actions compiler.
+        </p>
+      </div>
+      <div class="notice">
+        <strong>Public SDK packages are not available yet.</strong>
+        <p>
+          The current sample is locally checked developer tooling. These docs do not
+          provide an installable SDK or qualified native CI execution.
+        </p>
+      </div>
+      <section>
+        <h2>What works in the sample</h2>
+        <p>
+          Define manual dispatch inputs, jobs, shell steps, environment bindings, and
+          typed string outputs. A consumer’s reference to a producer output creates the
+          dependency automatically. Python and TypeScript interfaces are generated from
+          the Ferrun-owned Rust contract.
+        </p>
+        <div
+          class="flow"
+          aria-label="A producer exports a typed string output that a consumer receives"
+        >
+          <span>Producer job</span><span class="flow-value">typed string output</span
+          ><span>Consumer job</span>
+        </div>
+        <p>
+          All three language examples produce identical GitHub Actions YAML through real
+          native adapters. Local checks cover types, output handoff, generation drift,
+          and accepted and rejected target boundaries.
+        </p>
+      </section>
+      <!-- This bounded example describes composition; it is not an installation command. -->
+      <section>
+        <h2>Python authoring shape</h2>
+        <div class="code-block">
+          <button class="copy" type="button" hidden>Copy example</button>
+          <pre><code># Import the generated builder after the SDK is provided by your development setup.
+from ferrun_pipeline import Pipeline
+
+# The operator supplies the label of registered execution capacity.
+pipeline = Pipeline("Build and verify")
+runner = pipeline.input("pool_label", "Explicit executor pool label")
+
+# Export a real step output as a typed producer reference.
+build = pipeline.job("build", runner)
+build.run("result", 'echo "revision=$GITHUB_SHA" &gt;&gt; "$GITHUB_OUTPUT"')
+revision = build.output("revision", "result")
+
+# Rust derives the dependency from the value the verifier consumes.
+verify = pipeline.job("verify", runner)
+verify.run("check", 'test -n "$REVISION"', env={"REVISION": revision})
+
+# Compilation returns YAML; it does not dispatch or execute a workflow.
+print(pipeline.compile_github_actions())</code></pre>
+        </div>
+      </section>
+      <section>
+        <h2>Execution boundaries</h2>
+        <p>
+          GitHub owns job scheduling for the compiled workflow. Runner labels select
+          registered capacity; they do not provision an operating system. Native Ferrun
+          function scheduling, programmable caches, distribution, and adaptive placement
+          remain designs.
+        </p>
+        <p>
+          The generated sample workflows have not been qualified live against GitHub.
+          Public package downloads will require their own versioned inventory, native
+          binding coverage, and verification evidence.
+        </p>
+      </section>
+    </main>
+    <footer><span>Ferrun</span><a href="index.html">Back to downloads</a></footer>
+    <p id="copy-status" class="sr-only" role="status" aria-live="polite"></p>
+  </body>
+</html>
