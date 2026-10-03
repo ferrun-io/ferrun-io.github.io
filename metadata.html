@@ -70,9 +70,12 @@
         <dd>The separate checksum file for this download.</dd>
         <dt><code>/targets/*/tests_url</code></dt>
         <dd>
-          The test report for this download. It records the source commit and archive
-          checksum.
+          The original native test report. If the license notice was corrected, its
+          archive checksum refers to the package before that correction; the binaries
+          and other files are unchanged.
         </dd>
+        <dt><code>/targets/*/original_archive_sha256</code></dt>
+        <dd>The checksum of the archive covered by the original native test report.</dd>
       </dl>
     </main>
   </body>

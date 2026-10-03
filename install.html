@@ -17,9 +17,9 @@
     </header>
     <!-- Use the selected release’s filenames in the installation commands. -->
     <main>
-      <h1>Install Ferrun </h1>
+      <h1>Install Ferrun v0.0.1</h1>
       <p>You do not need Rust or Python to install Ferrun.</p>
-      <p>No releases are available for download.</p>
+      <p>This release has not been verified with GitHub Actions.</p>
       <section>
         <h2>1. Choose your download</h2>
         <p>
@@ -43,7 +43,66 @@
           Open the section for your computer below. Run its commands from the folder
           containing both downloaded files.
         </p>
-        
+        <details><summary>Linux · ARM64</summary>
+<pre><code># The parentheses keep these settings out of your current shell.
+(
+    set -eu
+    # Check that this Linux computer has the matching processor.
+    test &quot;$(uname -s)&quot; = &#x27;Linux&#x27;
+    native_arch=&quot;$(uname -m)&quot;
+    test &quot;$native_arch&quot; = &#x27;aarch64&#x27;
+    # Check the downloaded file before extracting it.
+    archive=&#x27;ferrun-v0.0.1-aarch64-unknown-linux-gnu.licensed.tar.gz&#x27;
+    sha256sum -c &quot;$archive.sha256&quot;
+    # Use a new folder so files from different releases cannot mix.
+    bundle_dir=&quot;${archive%.tar.gz}&quot;
+    mkdir &quot;$bundle_dir&quot;
+    tar -xzf &quot;$archive&quot; -C &quot;$bundle_dir&quot;
+    cd &quot;$bundle_dir&quot;
+)</code></pre>
+</details>
+<details><summary>Windows · ARM64</summary>
+<pre><code># Stop if the download does not match this computer.
+if ([Environment]::OSVersion.Platform -ne &#x27;Win32NT&#x27;) {
+    throw &#x27;Choose the download for your operating system&#x27;
+}
+if ([Runtime.InteropServices.RuntimeInformation]::OSArchitecture.ToString() -ne &#x27;Arm64&#x27;) {
+    throw &#x27;Choose the Windows download that matches your processor&#x27;
+}
+# Check the downloaded file before extracting it.
+$archive = &#x27;ferrun-v0.0.1-aarch64-pc-windows-msvc.licensed.zip&#x27;
+$expected = ((Get-Content &quot;$archive.sha256&quot; -Raw).Trim() -split &#x27;\s+&#x27;)[0]
+if ((Get-FileHash $archive -Algorithm SHA256).Hash -ne $expected) {
+    throw &#x27;Archive checksum does not match&#x27;
+}
+# Use a new folder so files from different releases cannot mix.
+$bundleDir = [IO.Path]::GetFileNameWithoutExtension($archive)
+if (Test-Path $bundleDir) { throw &#x27;Choose an empty destination&#x27; }
+Expand-Archive -Path $archive -DestinationPath $bundleDir
+Set-Location $bundleDir
+</code></pre>
+</details>
+<details><summary>macOS · Apple silicon</summary>
+<pre><code># The parentheses keep these settings out of your current shell.
+(
+    set -eu
+    # Check the actual Mac hardware even if the terminal uses Rosetta.
+    test &quot;$(uname -s)&quot; = &#x27;Darwin&#x27;
+    native_arch=&quot;$(uname -m)&quot;
+    if [ &quot;$(sysctl -in hw.optional.arm64 2&gt;/dev/null || printf 0)&quot; = 1 ]; then
+        native_arch=arm64
+    fi
+    test &quot;$native_arch&quot; = &#x27;arm64&#x27;
+    # Check the downloaded file before extracting it.
+    archive=&#x27;ferrun-v0.0.1-aarch64-apple-darwin.licensed.tar.gz&#x27;
+    shasum -a 256 -c &quot;$archive.sha256&quot;
+    # Use a new folder so files from different releases cannot mix.
+    bundle_dir=&quot;${archive%.tar.gz}&quot;
+    mkdir &quot;$bundle_dir&quot;
+    tar -xzf &quot;$archive&quot; -C &quot;$bundle_dir&quot;
+    cd &quot;$bundle_dir&quot;
+)</code></pre>
+</details>
         <p>
           Read <code>docs/install.md</code> in the extracted folder and install its
           prerequisites. From that folder, run <code>./ferrun --version</code> on Linux
