@@ -15,14 +15,15 @@
         <a href="sdk.html">SDKs</a>
       </nav>
     </header>
-    <!-- Instructions must match the selected release and its host prerequisites. -->
+    <!-- Use the selected release’s filenames in the installation commands. -->
     <main>
-      <h1>Install Ferrun v0.0.1</h1>
+      <h1>Install Ferrun </h1>
       <p>You do not need Rust or Python to install Ferrun.</p>
       <p>
-        This release passed its build and package tests. Its compatibility with GitHub
-        Actions has not been verified.
+        Sign in to GitHub with an account that has access to the private release
+        repository.
       </p>
+      <p>No releases are available for download.</p>
       <section>
         <h2>1. Choose your download</h2>
         <p>
@@ -46,71 +47,12 @@
           Open the section for your computer below. Run its commands from the folder
           containing both downloaded files.
         </p>
-        <details><summary>Linux · ARM64</summary>
-<pre><code># The parentheses keep these settings out of your current shell.
-(
-    set -eu
-    # Check that this Linux computer has the matching processor.
-    test &quot;$(uname -s)&quot; = &#x27;Linux&#x27;
-    native_arch=&quot;$(uname -m)&quot;
-    test &quot;$native_arch&quot; = &#x27;aarch64&#x27;
-    # Check the downloaded file before extracting it.
-    archive=&#x27;ferrun-v0.0.1-aarch64-unknown-linux-gnu.tar.gz&#x27;
-    sha256sum -c &quot;$archive.sha256&quot;
-    # Use a new folder so files from different releases cannot mix.
-    bundle_dir=&quot;${archive%.tar.gz}&quot;
-    mkdir &quot;$bundle_dir&quot;
-    tar -xzf &quot;$archive&quot; -C &quot;$bundle_dir&quot;
-    cd &quot;$bundle_dir&quot;
-    # Print the version without starting services or connecting this computer.
-    ./ferrun --version
-)</code></pre>
-</details>
-<details><summary>Windows · ARM64</summary><p>Install Microsoft’s <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist">Visual C++ v14 Redistributable</a> for ARM64. Restart the computer if the installer asks.</p>
-<pre><code># Stop if the download does not match this computer.
-if ([Environment]::OSVersion.Platform -ne &#x27;Win32NT&#x27;) {
-    throw &#x27;Choose the download for your operating system&#x27;
-}
-if ([Runtime.InteropServices.RuntimeInformation]::OSArchitecture.ToString() -ne &#x27;Arm64&#x27;) {
-    throw &#x27;Choose the Windows download that matches your processor&#x27;
-}
-# Check the downloaded file before extracting it.
-$archive = &#x27;ferrun-v0.0.1-aarch64-pc-windows-msvc.zip&#x27;
-$expected = ((Get-Content &quot;$archive.sha256&quot; -Raw).Trim() -split &#x27;\s+&#x27;)[0]
-if ((Get-FileHash $archive -Algorithm SHA256).Hash -ne $expected) {
-    throw &#x27;Archive checksum does not match&#x27;
-}
-# Use a new folder so files from different releases cannot mix.
-$bundleDir = [IO.Path]::GetFileNameWithoutExtension($archive)
-if (Test-Path $bundleDir) { throw &#x27;Choose an empty destination&#x27; }
-Expand-Archive -Path $archive -DestinationPath $bundleDir
-Set-Location $bundleDir
-# Print the version without starting services or connecting this computer.
-.\ferrun.exe --version</code></pre>
-</details>
-<details><summary>macOS · Apple silicon</summary>
-<pre><code># The parentheses keep these settings out of your current shell.
-(
-    set -eu
-    # Check the actual Mac hardware even if the terminal uses Rosetta.
-    test &quot;$(uname -s)&quot; = &#x27;Darwin&#x27;
-    native_arch=&quot;$(uname -m)&quot;
-    if [ &quot;$(sysctl -in hw.optional.arm64 2&gt;/dev/null || printf 0)&quot; = 1 ]; then
-        native_arch=arm64
-    fi
-    test &quot;$native_arch&quot; = &#x27;arm64&#x27;
-    # Check the downloaded file before extracting it.
-    archive=&#x27;ferrun-v0.0.1-aarch64-apple-darwin.tar.gz&#x27;
-    shasum -a 256 -c &quot;$archive.sha256&quot;
-    # Use a new folder so files from different releases cannot mix.
-    bundle_dir=&quot;${archive%.tar.gz}&quot;
-    mkdir &quot;$bundle_dir&quot;
-    tar -xzf &quot;$archive&quot; -C &quot;$bundle_dir&quot;
-    cd &quot;$bundle_dir&quot;
-    # Print the version without starting services or connecting this computer.
-    ./ferrun --version
-)</code></pre>
-</details>
+        
+        <p>
+          Read <code>docs/install.md</code> in the extracted folder and install its
+          prerequisites. From that folder, run <code>./ferrun --version</code> on Linux
+          or macOS, or <code>.\ferrun.exe --version</code> on Windows.
+        </p>
         <p>
           The printed version must match the selected release. Keep the complete
           extracted folder, including its programs, documentation, and license files.
@@ -120,7 +62,7 @@ Set-Location $bundleDir
           approve it through your company’s usual process.
         </p>
       </section>
-      <!-- Connecting a computer must not require the server's App key or database credentials. -->
+      <!-- Keep the server’s GitHub App key and database credentials out of employee setup. -->
       <section>
         <h2>3. Configure Ferrun</h2>
         <h3>Connect a computer to your company’s server</h3>
@@ -130,10 +72,6 @@ Set-Location $bundleDir
           runners.
         </p>
         <p>
-          Install Git and Node 24. Actions that use Node 20 also need that version
-          installed.
-        </p>
-        <p>
           Follow <code>docs/company-setup.md</code> in the extracted folder to provide
           the token through <code>FERRUN_ENROLLMENT_TOKEN</code> and configure the
           connection. Your computer does not need the company’s GitHub App key or
@@ -141,13 +79,9 @@ Set-Location $bundleDir
         </p>
         <h3>Run your own Ferrun server</h3>
         <p>
-          You need a GitHub App authorized for the repositories you want to use, its
-          private key, and PostgreSQL or Docker. Other computers must be able to reach
-          your server over HTTPS.
-        </p>
-        <p>
           Follow <code>docs/github-app-setup.md</code> and
-          <code>docs/company-setup.md</code> in the extracted folder.
+          <code>docs/company-setup.md</code> in the extracted folder for the server’s
+          prerequisites and setup.
         </p>
       </section>
       <section>

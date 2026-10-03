@@ -1,4 +1,4 @@
-/* System fonts keep text readable without font downloads. */
+/* Use the browser’s light colors and system fonts for the release pages. */
 :root {
   color-scheme: light;
 }

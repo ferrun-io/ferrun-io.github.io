@@ -19,14 +19,18 @@
     <main>
       <h1>JSON field reference</h1>
       <p>
-        <a href="releases.json">releases.json</a> lists this release’s downloads,
-        checksums, and test results.
+        <a href="releases.json">releases.json</a> lists available downloads, checksums,
+        and test results.
+      </p>
+      <p>
+        If no release is available, the target list is empty and release-specific fields
+        are omitted.
       </p>
       <dl>
         <dt><code>/format</code></dt>
-        <dd>The format version of the JSON catalog. This page describes version 1.</dd>
+        <dd>The format version of this JSON file. This page describes version 1.</dd>
         <dt><code>/distribution_repository</code></dt>
-        <dd>The public GitHub repository that hosts the downloads.</dd>
+        <dd>The private GitHub repository that hosts the downloads.</dd>
         <dt><code>/tag</code></dt>
         <dd>The release tag used in the download URLs.</dd>
         <dt><code>/source_commit</code></dt>
@@ -34,10 +38,7 @@
         <dt><code>/runner_version</code></dt>
         <dd>The GitHub runner version selected when the release was built.</dd>
         <dt><code>/live_qualification_passed</code></dt>
-        <dd>
-          Whether the release passed the GitHub Actions compatibility checks. It is
-          false for this release.
-        </dd>
+        <dd>Whether the release passed the GitHub Actions compatibility checks.</dd>
         <dt><code>/release_url</code></dt>
         <dd>The release page with its notes and downloads.</dd>
         <dt><code>/metadata_url</code></dt>
@@ -62,12 +63,16 @@
         <dt><code>/targets/*/bytes</code></dt>
         <dd>The download size in bytes.</dd>
         <dt><code>/targets/*/download_url</code></dt>
-        <dd>The download URL. No private repository credentials are needed.</dd>
+        <dd>
+          The download URL. GitHub sign-in and access to the release repository are
+          required.
+        </dd>
         <dt><code>/targets/*/checksum_url</code></dt>
         <dd>The separate checksum file for this download.</dd>
         <dt><code>/targets/*/tests_url</code></dt>
         <dd>
-          The test report identifying the same source commit and download checksum.
+          The test report for this download. It records the source commit and archive
+          checksum.
         </dd>
       </dl>
     </main>
