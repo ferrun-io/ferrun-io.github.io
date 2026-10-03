@@ -1,49 +1,30 @@
 <!doctype html>
-<!-- Instructions describe the selected package without requiring private source access. -->
+<!-- Plain HTML keeps the guide usable without scripts or source-repository access. -->
 <html lang="en">
   <head>
-    <!-- Keep every local route independent of its GitHub Pages repository prefix. -->
+    <!-- Relative navigation and one stylesheet work on the public Pages address. -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Verify a Ferrun preview bundle and choose company server or employee executor setup."
-    />
-    <meta name="color-scheme" content="dark" />
-    <title>Install · Ferrun</title>
-    <link rel="stylesheet" href="theme.css" />
+    <title>Install Ferrun</title>
     <link rel="stylesheet" href="site.css" />
-    <script src="site.js" defer></script>
   </head>
   <body>
-    <!-- The same navigation and landmarks preserve orientation across the portal. -->
-    <a class="skip" href="#main">Skip to installation</a>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Ferrun downloads"
-        ><svg viewBox="0 0 64 64" aria-hidden="true">
-          <path d="M12 10h40l-8 8H20v12h25l-8 8H20v16h-8z" /></svg
-        >Ferrun</a
-      >
+    <!-- Shared navigation preserves orientation without custom controls. -->
+    <header>
       <nav aria-label="Main navigation">
-        <a href="index.html">Downloads</a
-        ><a href="install.html" aria-current="page">Install</a
-        ><a href="sdk.html">SDKs</a>
+        <a href="index.html">Downloads</a>
+        <a href="install.html" aria-current="page">Install</a>
+        <a href="sdk.html">SDKs</a>
       </nav>
     </header>
-    <main id="main" class="guide">
+    <main>
       <!-- Start with the exact installation route and its material eligibility boundary. -->
-      <div class="page-heading">
-        <p class="eyebrow">Installation</p>
-        <h1>Verify before you run.</h1>
-        <p class="lede">Native bundles need neither Rust nor Python.</p>
-      </div>
-      <div class="notice">
-        <strong>v0.0.1 is a build and test preview.</strong>
-        <p>
-          These archives have not passed live GitHub compatibility qualification.
-          Installation does not establish supported workflow execution.
-        </p>
-      </div>
+      <h1>Install Ferrun</h1>
+      <p>Native bundles need neither Rust nor Python.</p>
+      <p>
+        <strong>v0.0.1 is a preview.</strong> Native checks passed; live GitHub
+        compatibility is not qualified.
+      </p>
       <section>
         <h2>1. Match your machine</h2>
         <p>
@@ -65,7 +46,8 @@
           containing the archive and its matching checksum file. A failed platform or
           checksum check stops extraction.
         </p>
-        <details><summary>Linux · ARM64</summary><div class="code-block"><button class="copy" type="button" hidden>Copy commands</button><pre><code># A subshell stops at any failure without changing your shell settings.
+        <details><summary>Linux · ARM64</summary>
+<pre><code># A subshell stops at any failure without changing your shell settings.
 (
     set -eu
     # Detect the hardware architecture even when macOS uses Rosetta.
@@ -82,8 +64,10 @@
     cd &quot;$bundle_dir&quot;
     # Identify the program without configuring services or enrolling a machine.
     ./ferrun --version
-)</code></pre></div></details>
-<details><summary>Windows · ARM64</summary><p>First install Microsoft’s supported <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist">Visual C++ v14 Redistributable</a> for this native architecture. Complete any requested restart.</p><div class="code-block"><button class="copy" type="button" hidden>Copy commands</button><pre><code># Reject a different operating system or native architecture.
+)</code></pre>
+</details>
+<details><summary>Windows · ARM64</summary><p>First install Microsoft’s supported <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist">Visual C++ v14 Redistributable</a> for this native architecture. Complete any requested restart.</p>
+<pre><code># Reject a different operating system or native architecture.
 if ([Environment]::OSVersion.Platform -ne &#x27;Win32NT&#x27;) {
     throw &#x27;Select a release bundle for this operating system&#x27;
 }
@@ -102,8 +86,10 @@ if (Test-Path $bundleDir) { throw &#x27;Choose an empty destination&#x27; }
 Expand-Archive -Path $archive -DestinationPath $bundleDir
 Set-Location $bundleDir
 # Identify the program without configuring services or enrolling a machine.
-.\ferrun.exe --version</code></pre></div></details>
-<details><summary>macOS · Apple silicon</summary><div class="code-block"><button class="copy" type="button" hidden>Copy commands</button><pre><code># A subshell stops at any failure without changing your shell settings.
+.\ferrun.exe --version</code></pre>
+</details>
+<details><summary>macOS · Apple silicon</summary>
+<pre><code># A subshell stops at any failure without changing your shell settings.
 (
     set -eu
     # Detect the hardware architecture even when macOS uses Rosetta.
@@ -123,7 +109,8 @@ Set-Location $bundleDir
     cd &quot;$bundle_dir&quot;
     # Identify the program without configuring services or enrolling a machine.
     ./ferrun --version
-)</code></pre></div></details>
+)</code></pre>
+</details>
         <p>
           The reported version must match the selected release. Keep
           <code>ferrun</code>, <code>control-plane</code>, <code>executor</code>, the
@@ -134,29 +121,25 @@ Set-Location $bundleDir
       <!-- Roles explain real prerequisite and credential boundaries before configuration. -->
       <section>
         <h2>3. Choose the setup role</h2>
-        <div class="role">
-          <h3>Employee executor</h3>
-          <p>
-            Your operator supplies an HTTPS control-plane URL, pool ID, and pool
-            enrollment credential. Install Git and Node 24; Node 20 actions also need
-            Node 20. Supply the credential through <code>FERRUN_ENROLLMENT_TOKEN</code>,
-            then use <code>ferrun setup --server</code> and <code>ferrun run</code> as
-            described in the bundle’s company setup guide.
-          </p>
-          <p>
-            This role needs no GitHub App key, management token, database, or private
-            source repository access.
-          </p>
-        </div>
-        <div class="role">
-          <h3>Company or personal control plane</h3>
-          <p>
-            An administrator supplies an authorized GitHub App, its private key,
-            approved repositories, and PostgreSQL or Docker. Remote executors also need
-            an HTTPS endpoint managed by the operator. Follow the bundle’s company and
-            GitHub App setup guides.
-          </p>
-        </div>
+        <h3>Employee executor</h3>
+        <p>
+          Your operator supplies an HTTPS control-plane URL, pool ID, and pool
+          enrollment credential. Install Git and Node 24; Node 20 actions also need Node
+          20. Supply the credential through <code>FERRUN_ENROLLMENT_TOKEN</code>, then
+          use <code>ferrun setup --server</code> and <code>ferrun run</code> as
+          described in the bundle’s company setup guide.
+        </p>
+        <p>
+          This role needs no GitHub App key, management token, database, or private
+          source repository access.
+        </p>
+        <h3>Company or personal control plane</h3>
+        <p>
+          An administrator supplies an authorized GitHub App, its private key, approved
+          repositories, and PostgreSQL or Docker. Remote executors also need an HTTPS
+          endpoint managed by the operator. Follow the bundle’s company and GitHub App
+          setup guides.
+        </p>
         <p>
           Open <code>docs/company-setup.md</code> from the extracted bundle for the
           supported setup commands. Read <code>docs/runtime.md</code> for workflow
@@ -178,7 +161,5 @@ Set-Location $bundleDir
         </p>
       </section>
     </main>
-    <footer><span>Ferrun</span><a href="index.html">Back to downloads</a></footer>
-    <p id="copy-status" class="sr-only" role="status" aria-live="polite"></p>
   </body>
 </html>

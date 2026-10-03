@@ -1,136 +1,75 @@
 <!doctype html>
-<!-- Companion documentation keeps the public catalog's strict JSON valid. -->
+<!-- Plain HTML keeps the guide usable without scripts or source-repository access. -->
 <html lang="en">
   <head>
-    <!-- Relative routes support both project Pages and custom-domain deployment. -->
+    <!-- Relative navigation and one stylesheet work on the public Pages address. -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark" />
-    <title>Release catalog · Ferrun</title>
-    <link rel="stylesheet" href="theme.css" />
+    <title>Release catalog</title>
     <link rel="stylesheet" href="site.css" />
   </head>
   <body>
-    <!-- Public metadata is readable without an agent, a token, or private source access. -->
-    <a class="skip" href="#main">Skip to catalog reference</a>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Ferrun downloads"
-        ><svg viewBox="0 0 64 64" aria-hidden="true">
-          <path d="M12 10h40l-8 8H20v12h25l-8 8H20v16h-8z" /></svg
-        >Ferrun</a
-      >
+    <!-- Shared navigation preserves orientation without custom controls. -->
+    <header>
       <nav aria-label="Main navigation">
-        <a href="index.html">Downloads</a><a href="install.html">Install</a
-        ><a href="sdk.html">SDKs</a>
+        <a href="index.html">Downloads</a>
+        <a href="install.html">Install</a>
+        <a href="sdk.html">SDKs</a>
       </nav>
     </header>
-    <main id="main" class="guide">
-      <!-- Each field describes identity or evidence; none silently grants execution eligibility. -->
-      <div class="page-heading">
-        <p class="eyebrow">Agent reference</p>
-        <h1>Release catalog.</h1>
-        <p class="lede">
-          Read <a href="releases.json">releases.json</a> to discover the currently
-          displayed release.
-        </p>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">JSON pointer</th>
-              <th scope="col">Meaning</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><code>/format</code></th>
-              <td>Catalog schema version. This reference describes version 1.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/distribution_repository</code></th>
-              <td>
-                Public repository serving the bundles; distinct from their source
-                repository.
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/tag</code></th>
-              <td>Exact version tag used in all asset URLs.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/source_commit</code></th>
-              <td>
-                Immutable implementation identity recorded in the build inventory and
-                manifests.
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/runner_version</code></th>
-              <td>
-                Recorded GitHub runner compatibility pin; not proof of service
-                compatibility.
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/live_qualification_passed</code></th>
-              <td>
-                False for this build/test preview. Do not treat it as an approved
-                customer trial release.
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/release_url</code></th>
-              <td>Public release notes and asset listing.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/metadata_url</code></th>
-              <td>
-                Unmodified original build inventory, including its source repository
-                attribution.
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/targets/*/target</code></th>
-              <td>
-                Native Rust target. Select only the computer’s actual OS and
-                architecture.
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/targets/*/platform</code></th>
-              <td>Readable platform label for the same target.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/targets/*/archive</code></th>
-              <td>Exact flat asset name; not a source-code archive.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/targets/*/sha256</code></th>
-              <td>
-                SHA-256 of the complete compressed archive, including its manifest.
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/targets/*/bytes</code></th>
-              <td>Compressed download size in bytes.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/targets/*/download_url</code></th>
-              <td>Public bundle URL requiring no source repository credentials.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/targets/*/checksum_url</code></th>
-              <td>Matching sidecar checksum file.</td>
-            </tr>
-            <tr>
-              <th scope="row"><code>/targets/*/tests_url</code></th>
-              <td>Native test report bound to the same source and archive digest.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <main>
+      <!-- Each field describes identity or evidence, without granting execution eligibility. -->
+      <h1>Release catalog</h1>
+      <p>Read <a href="releases.json">releases.json</a> for the displayed release.</p>
+      <dl>
+        <dt><code>/format</code></dt>
+        <dd>Catalog schema version. This reference describes version 1.</dd>
+        <dt><code>/distribution_repository</code></dt>
+        <dd>
+          Public repository serving the bundles; distinct from their source repository.
+        </dd>
+        <dt><code>/tag</code></dt>
+        <dd>Exact version tag used in all asset URLs.</dd>
+        <dt><code>/source_commit</code></dt>
+        <dd>
+          Immutable implementation identity recorded in the build inventory and
+          manifests.
+        </dd>
+        <dt><code>/runner_version</code></dt>
+        <dd>
+          Recorded GitHub runner compatibility pin; not proof of service compatibility.
+        </dd>
+        <dt><code>/live_qualification_passed</code></dt>
+        <dd>
+          False for this build/test preview. Do not treat it as an approved customer
+          trial release.
+        </dd>
+        <dt><code>/release_url</code></dt>
+        <dd>Public release notes and asset listing.</dd>
+        <dt><code>/metadata_url</code></dt>
+        <dd>
+          Unmodified original build inventory, including its source repository
+          attribution.
+        </dd>
+        <dt><code>/targets/*/target</code></dt>
+        <dd>
+          Native Rust target. Select only the computer’s actual OS and architecture.
+        </dd>
+        <dt><code>/targets/*/platform</code></dt>
+        <dd>Readable platform label for the same target.</dd>
+        <dt><code>/targets/*/archive</code></dt>
+        <dd>Exact flat asset name; not a source-code archive.</dd>
+        <dt><code>/targets/*/sha256</code></dt>
+        <dd>SHA-256 of the complete compressed archive, including its manifest.</dd>
+        <dt><code>/targets/*/bytes</code></dt>
+        <dd>Compressed download size in bytes.</dd>
+        <dt><code>/targets/*/download_url</code></dt>
+        <dd>Public bundle URL requiring no source repository credentials.</dd>
+        <dt><code>/targets/*/checksum_url</code></dt>
+        <dd>Matching sidecar checksum file.</dd>
+        <dt><code>/targets/*/tests_url</code></dt>
+        <dd>Native test report bound to the same source and archive digest.</dd>
+      </dl>
     </main>
-    <footer><span>Ferrun</span><a href="index.html">Back to downloads</a></footer>
   </body>
 </html>

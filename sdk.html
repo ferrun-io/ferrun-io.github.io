@@ -1,51 +1,33 @@
 <!doctype html>
-<!-- Document the working authoring sample without inventing registry packages. -->
+<!-- Plain HTML keeps the guide usable without scripts or source-repository access. -->
 <html lang="en">
   <head>
-    <!-- SDK docs share the same self-hosted assets as release and installation pages. -->
+    <!-- Relative navigation and one stylesheet work on the public Pages address. -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Ferrun typed pipeline SDK preview: Rust, Python, and TypeScript authoring through one Rust compiler."
-    />
-    <meta name="color-scheme" content="dark" />
-    <title>SDKs · Ferrun</title>
-    <link rel="stylesheet" href="theme.css" />
+    <title>Ferrun SDKs</title>
     <link rel="stylesheet" href="site.css" />
-    <script src="site.js" defer></script>
   </head>
   <body>
-    <!-- Current-page labels and skip links keep the documentation navigable. -->
-    <a class="skip" href="#main">Skip to SDK documentation</a>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Ferrun downloads"
-        ><svg viewBox="0 0 64 64" aria-hidden="true">
-          <path d="M12 10h40l-8 8H20v12h25l-8 8H20v16h-8z" /></svg
-        >Ferrun</a
-      >
+    <!-- Shared navigation preserves orientation without custom controls. -->
+    <header>
       <nav aria-label="Main navigation">
-        <a href="index.html">Downloads</a><a href="install.html">Install</a
-        ><a href="sdk.html" aria-current="page">SDKs</a>
+        <a href="index.html">Downloads</a>
+        <a href="install.html">Install</a>
+        <a href="sdk.html" aria-current="page">SDKs</a>
       </nav>
     </header>
-    <main id="main" class="guide">
+    <main>
       <!-- Make package availability explicit before showing authoring concepts. -->
-      <div class="page-heading">
-        <p class="eyebrow">SDK preview</p>
-        <h1>Connect work with typed data.</h1>
-        <p class="lede">
-          Rust, Python, and TypeScript authors share one Rust graph validator and GitHub
-          Actions compiler.
-        </p>
-      </div>
-      <div class="notice">
-        <strong>Public SDK packages are not available yet.</strong>
-        <p>
-          The current sample is locally checked developer tooling. These docs do not
-          provide an installable SDK or qualified native CI execution.
-        </p>
-      </div>
+      <h1>SDKs</h1>
+      <p>
+        Rust, Python, and TypeScript authors share one Rust graph validator and GitHub
+        Actions compiler.
+      </p>
+      <p>
+        <strong>Public SDK packages are not available yet.</strong> This is a locally
+        checked authoring sample, not qualified native CI execution.
+      </p>
       <section>
         <h2>What works in the sample</h2>
         <p>
@@ -54,13 +36,6 @@
           dependency automatically. Python and TypeScript interfaces are generated from
           the Ferrun-owned Rust contract.
         </p>
-        <div
-          class="flow"
-          aria-label="A producer exports a typed string output that a consumer receives"
-        >
-          <span>Producer job</span><span class="flow-value">typed string output</span
-          ><span>Consumer job</span>
-        </div>
         <p>
           All three language examples produce identical GitHub Actions YAML through real
           native adapters. Local checks cover types, output handoff, generation drift,
@@ -70,9 +45,7 @@
       <!-- This bounded example describes composition; it is not an installation command. -->
       <section>
         <h2>Python authoring shape</h2>
-        <div class="code-block">
-          <button class="copy" type="button" hidden>Copy example</button>
-          <pre><code># Import the generated builder after the SDK is provided by your development setup.
+        <pre><code># Import the generated builder after the SDK is provided by your development setup.
 from ferrun_pipeline import Pipeline
 
 # The operator supplies the label of registered execution capacity.
@@ -90,7 +63,6 @@ verify.run("check", 'test -n "$REVISION"', env={"REVISION": revision})
 
 # Compilation returns YAML; it does not dispatch or execute a workflow.
 print(pipeline.compile_github_actions())</code></pre>
-        </div>
       </section>
       <section>
         <h2>Execution boundaries</h2>
@@ -107,7 +79,5 @@ print(pipeline.compile_github_actions())</code></pre>
         </p>
       </section>
     </main>
-    <footer><span>Ferrun</span><a href="index.html">Back to downloads</a></footer>
-    <p id="copy-status" class="sr-only" role="status" aria-live="polite"></p>
   </body>
 </html>
