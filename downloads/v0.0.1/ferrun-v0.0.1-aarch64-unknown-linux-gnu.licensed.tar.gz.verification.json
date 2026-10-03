@@ -1,9 +1,0 @@
-{
-  "archive": "ferrun-v0.0.1-aarch64-unknown-linux-gnu.licensed.tar.gz",
-  "archive_sha256": "80a24d21412584408d993846ec5e4808949c50a11fd77ef95c727e096fb7287e",
-  "original_test_archive_sha256": "b25447e4a53309447fc093ed061acf6046ea2e1d2e653a3ccd657cfbd7d437dd",
-  "archive_inventory_and_file_hashes_verified": true,
-  "ferrun_license_notice_verified": true,
-  "other_payload_files_unchanged": true,
-  "live_qualification_passed": false
-}

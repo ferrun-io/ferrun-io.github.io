@@ -1,6 +1,7 @@
 /* Use the browser’s light colors and system fonts for the release pages. */
 :root {
   color-scheme: light;
+  --inline-code-background: #f2f2f2;
 }
 body {
   max-width: 48rem;
@@ -29,6 +30,13 @@ summary:focus-visible {
 code {
   font-size: 0.9375rem;
   overflow-wrap: anywhere;
+}
+
+/* Distinguish inline commands and filenames from the surrounding text. */
+:not(pre) > code {
+  background: var(--inline-code-background);
+  padding: 0.1em 0.3em;
+  border-radius: 0.2em;
 }
 pre {
   white-space: pre-wrap;

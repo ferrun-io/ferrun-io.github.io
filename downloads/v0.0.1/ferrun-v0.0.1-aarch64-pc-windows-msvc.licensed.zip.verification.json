@@ -1,9 +1,0 @@
-{
-  "archive": "ferrun-v0.0.1-aarch64-pc-windows-msvc.licensed.zip",
-  "archive_sha256": "daae2f3682bf0f5c511cbf8438c809fca819ba73d9f3a5bebc1bcf234ac6a42f",
-  "original_test_archive_sha256": "90d3075016ea783f64f1e0457ec2397a53aed8e19e35b5add5a5d03aeb55e723",
-  "archive_inventory_and_file_hashes_verified": true,
-  "ferrun_license_notice_verified": true,
-  "other_payload_files_unchanged": true,
-  "live_qualification_passed": false
-}
