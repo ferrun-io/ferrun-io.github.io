@@ -1,6 +1,11 @@
 Ferrun v0.0.1
 
-The downloads include the corrected proprietary Ferrun notice. The program files and other package contents are unchanged from the original tested build.
+Downloads are available for Linux ARM64, Windows ARM64, and Apple silicon Macs at https://ferrun-io.github.io/. Download the bundle for your computer and its checksum.
 
-The original native test reports are preserved. Archive integrity and file hashes were checked again after correcting the notice. GitHub Actions compatibility has not been verified.
+All three downloads passed the GitHub Actions compatibility suite on their matching platforms. The checks covered checkout, actions, Python setup, cache and artifact round trips, job outputs, failures, long-running jobs, cancellation, timeouts, and summary reporting. Fresh installations also passed checksum and manifest checks, prerequisite and credential failure checks, and executor restart checks.
+
+The programs are unchanged from the original v0.0.1 build. The licensed archives correct the Ferrun license notice; third-party notices remain included. Ferrun is proprietary software.
+
+Workflow support and prerequisites: https://ferrun-io.github.io/runtime.html
+Installation: https://ferrun-io.github.io/install.html
 

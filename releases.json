@@ -4,7 +4,7 @@
   "tag": "v0.0.1",
   "source_commit": "ce500f003557603f60c5cc0a3c5d1acb3b40b349",
   "runner_version": "2.337.0",
-  "live_qualification_passed": false,
+  "live_qualification_passed": true,
   "release_url": "https://ferrun-io.github.io/downloads/v0.0.1/release-notes.txt",
   "metadata_url": "https://ferrun-io.github.io/downloads/v0.0.1/release.json",
   "targets": [
