@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Relative links work in local previews and under a GitHub Pages project path. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ferrun workflow support</title>
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Downloads</a>
+        <a href="install.html">Install</a>
+        <a href="sdk.html">SDKs</a>
+      </nav>
+    </header>
+    <!-- State the verification result beside the implemented features it limits. -->
+    <main>
+      <h1>Workflow support</h1>
+      <p>This release has not been verified with GitHub Actions.</p>
+      <h2>Jobs run on the host</h2>
+      <p>
+        Jobs run with the files and permissions of the account running Ferrun. Run only
+        workflows you trust. Jobs are not sandboxed or isolated from other jobs on the
+        same computer.
+      </p>
+      <p>
+        Ferrun does not support job containers, service containers, or Docker-based
+        actions. Using Docker for PostgreSQL does not put workflow jobs in containers.
+      </p>
+      <h2>Install the tools your workflow uses</h2>
+      <p>
+        Install Git, the requested shell, and any build tools on the computer running
+        the jobs. Ferrun does not install these tools for you.
+      </p>
+      <p>
+        Windows uses PowerShell by default. Linux and macOS use Bash, with sh as a
+        fallback. Workflows that select another shell need that shell installed.
+      </p>
+      <p>
+        JavaScript actions that use Node 20 or Node 24 need the matching version
+        installed. Set <code>EXECUTOR_NODE20</code> or <code>EXECUTOR_NODE24</code>
+        when it is not available on PATH.
+      </p>
+      <h2>Runner labels select existing computers</h2>
+      <p>
+        A workflow’s <code>runs-on</code> label selects a registered runner. Changing
+        its label does not create a virtual machine or install an operating system.
+      </p>
+      <p><a href="install.html">Return to installation</a>.</p>
+    </main>
+  </body>
+</html>
