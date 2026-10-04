@@ -48,9 +48,15 @@
 (
     set -eu
     # Check that this Linux computer has the matching processor.
-    test &quot;$(uname -s)&quot; = &#x27;Linux&#x27;
+    if [ &quot;$(uname -s)&quot; != &#x27;Linux&#x27; ]; then
+        printf &#x27;%s\n&#x27; &#x27;Choose the download for your operating system.&#x27; &gt;&amp;2
+        exit 1
+    fi
     native_arch=&quot;$(uname -m)&quot;
-    test &quot;$native_arch&quot; = &#x27;aarch64&#x27;
+    if [ &quot;$native_arch&quot; != &#x27;aarch64&#x27; ]; then
+        printf &#x27;%s\n&#x27; &#x27;Choose a download that matches your processor.&#x27; &gt;&amp;2
+        exit 1
+    fi
     # Check the downloaded file before extracting it.
     archive=&#x27;ferrun-v0.0.1-aarch64-unknown-linux-gnu.licensed.tar.gz&#x27;
     sha256sum -c &quot;$archive.sha256&quot;
@@ -87,12 +93,18 @@ Set-Location $bundleDir
 (
     set -eu
     # Check the actual Mac hardware even if the terminal uses Rosetta.
-    test &quot;$(uname -s)&quot; = &#x27;Darwin&#x27;
+    if [ &quot;$(uname -s)&quot; != &#x27;Darwin&#x27; ]; then
+        printf &#x27;%s\n&#x27; &#x27;Choose the download for your operating system.&#x27; &gt;&amp;2
+        exit 1
+    fi
     native_arch=&quot;$(uname -m)&quot;
     if [ &quot;$(sysctl -in hw.optional.arm64 2&gt;/dev/null || printf 0)&quot; = 1 ]; then
         native_arch=arm64
     fi
-    test &quot;$native_arch&quot; = &#x27;arm64&#x27;
+    if [ &quot;$native_arch&quot; != &#x27;arm64&#x27; ]; then
+        printf &#x27;%s\n&#x27; &#x27;Choose a download that matches your processor.&#x27; &gt;&amp;2
+        exit 1
+    fi
     # Check the downloaded file before extracting it.
     archive=&#x27;ferrun-v0.0.1-aarch64-apple-darwin.licensed.tar.gz&#x27;
     shasum -a 256 -c &quot;$archive.sha256&quot;
