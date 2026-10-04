@@ -3,3 +3,4 @@ Ferrun v0.0.1
 The downloads include the corrected proprietary Ferrun notice. The program files and other package contents are unchanged from the original tested build.
 
 The original native test reports are preserved. Archive integrity and file hashes were checked again after correcting the notice. GitHub Actions compatibility has not been verified.
+
