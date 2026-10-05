@@ -35,5 +35,6 @@
       "qualification": "macos-arm64-qualification.json"
     }
   ],
-  "packaging_change": "Ferrun license notice corrected; binaries and other payload files unchanged."
+  "packaging_change": "Ferrun license notice corrected; binaries and other payload files unchanged.",
+  "qualification_suite_sha256": "61005a4a318fcf640f0d7d659762649861ca1f78c912e9ab99ebad089b5dc5b7"
 }
