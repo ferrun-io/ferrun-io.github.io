@@ -41,5 +41,6 @@
       "tests_url": "https://ferrun-io.github.io/downloads/v0.0.1/macos-arm64-tests.json",
       "original_archive_sha256": "5b984670f0d70bf22111c8fb74d16abbb96b8fc13d1d888fb21bce15581fb1e6"
     }
-  ]
+  ],
+  "sdks": []
 }
