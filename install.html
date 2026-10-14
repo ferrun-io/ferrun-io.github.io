@@ -41,16 +41,14 @@ inventory and site.css.
           <li>On Windows, open Settings → System → About → System type.</li>
         </ul>
         <p>
-          Download the archive and its matching <code>.sha256</code> file into the same
-          folder. GitHub’s source-code archives do not contain the Ferrun programs.
+          Use the command for your platform below. Releases with a standalone CLI
+          download <code>ferrun</code> and start setup; bundle downloads include
+          separate verification and extraction commands.
         </p>
       </section>
       <section>
-        <h2>2. Check the checksum and extract</h2>
-        <p>
-          Open the section for your computer below. Run its commands from the folder
-          containing both downloaded files.
-        </p>
+        <h2>2. Install and connect</h2>
+        <p>Run the command for your computer in a terminal.</p>
         <details><summary>Linux · ARM64</summary>
 <pre><code># The parentheses keep these settings out of your current shell.
 (
@@ -100,13 +98,14 @@ inventory and site.css.
 )</code></pre>
 </details>
         <p>
-          Read <code>docs/install.md</code> in the extracted folder and install its
-          prerequisites. From that folder, run <code>./ferrun --version</code> on Linux
-          or macOS, or <code>.\ferrun.exe --version</code> on Windows.
+          For your company's controller, use
+          <code>ferrun setup --server URL --repo OWNER/REPO</code>. Interactive sign-in
+          requires device flow to be enabled for the controller's GitHub App. Your
+          administrator can also provide an enrolment token.
         </p>
         <p>
-          The printed version must match the selected release. Keep the complete
-          extracted folder, including its programs, documentation, and license files.
+          Start the runner with <code>ferrun run</code>. For a bundle release, follow
+          <code>docs/install.md</code> in its extracted folder.
         </p>
         <p>
           If your computer blocks the downloaded program, ask your administrator to
@@ -118,15 +117,13 @@ inventory and site.css.
         <h2>3. Configure Ferrun</h2>
         <h3>Connect a computer to your company’s server</h3>
         <p>
-          Ask your company administrator for the Ferrun server URL, pool ID, and
-          enrollment token. The token lets this computer join the company’s group of
-          runners.
+          Run <code>ferrun setup --server URL --repo OWNER/REPO</code> with your
+          company’s controller address. Your administrator can also provide a pool ID
+          and an enrolment token for unattended setup.
         </p>
         <p>
-          Follow <code>docs/company-setup.md</code> in the extracted folder to provide
-          the token through <code>FERRUN_ENROLLMENT_TOKEN</code> and configure the
-          connection. Your computer does not need the company’s GitHub App key or
-          database credentials.
+          Supply a join token through <code>FERRUN_ENROLLMENT_TOKEN</code> and run
+          <code>ferrun setup --server URL --pool POOL_ID</code>.
         </p>
         <h3>Run your own Ferrun server</h3>
         <p>
@@ -149,6 +146,14 @@ inventory and site.css.
         <p>
           Read <a href="runtime.html">workflow support</a> for restrictions and required
           tools.
+        </p>
+      </section>
+      <section>
+        <h2>Update</h2>
+        <p>
+          Run <code>ferrun update</code> for a managed installation. It waits for jobs
+          and reporting, saves a backup, and restarts the updated services. Update
+          notices do not change your installed version.
         </p>
       </section>
       <section>
