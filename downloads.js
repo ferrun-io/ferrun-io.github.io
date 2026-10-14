@@ -86,7 +86,7 @@ function render(root, inventory) {
       kind === 'sdk' ? sdk(name) : name.startsWith(`ferrun-${version}-`),
     );
     names = names.filter((name) => !name.endsWith('.sha256'));
-    if (kind === 'install') {
+    if (kind !== 'sdk') {
       // Prefer the standalone CLI when that release also contains its bundle.
       names = names.filter(
         (name) =>
