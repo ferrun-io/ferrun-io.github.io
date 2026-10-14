@@ -25,7 +25,7 @@ inventory and site.css.
     </header>
     <!-- Use the selected release’s filenames in the installation commands. -->
     <main>
-      <h1>Install Ferrun v0.0.2</h1>
+      <h1>Install Ferrun v0.0.3</h1>
       <p>You do not need Rust or Python to install Ferrun.</p>
       <p>Download the published runner bundles and SDK packages for your platform.</p>
       <section>
@@ -49,54 +49,8 @@ inventory and site.css.
       <section>
         <h2>2. Install and connect</h2>
         <p>Run the command for your computer in a terminal.</p>
-        <details><summary>Linux · ARM64</summary>
-<pre><code># The parentheses keep these settings out of your current shell.
-(
-    set -eu
-    # Check that this Linux computer has the matching processor.
-    if [ &quot;$(uname -s)&quot; != &#x27;Linux&#x27; ]; then
-        printf &#x27;%s\n&#x27; &#x27;Choose the download for your operating system.&#x27; &gt;&amp;2
-        exit 1
-    fi
-    native_arch=&quot;$(uname -m)&quot;
-    if [ &quot;$native_arch&quot; != &#x27;aarch64&#x27; ]; then
-        printf &#x27;%s\n&#x27; &#x27;Choose a download that matches your processor.&#x27; &gt;&amp;2
-        exit 1
-    fi
-    # Check the downloaded file before extracting it.
-    archive=&#x27;ferrun-v0.0.2-aarch64-unknown-linux-gnu.tar.gz&#x27;
-    sha256sum -c &quot;$archive.sha256&quot;
-    # Use a new folder so files from different releases cannot mix.
-    bundle_dir=&quot;${archive%.tar.gz}&quot;
-    mkdir &quot;$bundle_dir&quot;
-    tar -xzf &quot;$archive&quot; -C &quot;$bundle_dir&quot;
-    cd &quot;$bundle_dir&quot;
-)</code></pre>
-</details>
-<details><summary>Linux · x64</summary>
-<pre><code># The parentheses keep these settings out of your current shell.
-(
-    set -eu
-    # Check that this Linux computer has the matching processor.
-    if [ &quot;$(uname -s)&quot; != &#x27;Linux&#x27; ]; then
-        printf &#x27;%s\n&#x27; &#x27;Choose the download for your operating system.&#x27; &gt;&amp;2
-        exit 1
-    fi
-    native_arch=&quot;$(uname -m)&quot;
-    if [ &quot;$native_arch&quot; != &#x27;x86_64&#x27; ]; then
-        printf &#x27;%s\n&#x27; &#x27;Choose a download that matches your processor.&#x27; &gt;&amp;2
-        exit 1
-    fi
-    # Check the downloaded file before extracting it.
-    archive=&#x27;ferrun-v0.0.2-x86_64-unknown-linux-gnu.tar.gz&#x27;
-    sha256sum -c &quot;$archive.sha256&quot;
-    # Use a new folder so files from different releases cannot mix.
-    bundle_dir=&quot;${archive%.tar.gz}&quot;
-    mkdir &quot;$bundle_dir&quot;
-    tar -xzf &quot;$archive&quot; -C &quot;$bundle_dir&quot;
-    cd &quot;$bundle_dir&quot;
-)</code></pre>
-</details>
+        <h3>Linux · ARM64</h3><pre><code>curl --fail --location &#x27;https://ferrun-io.github.io/downloads/v0.0.3/ferrun-v0.0.3-aarch64-unknown-linux-gnu&#x27; --output ferrun &amp;&amp; chmod +x ferrun &amp;&amp; ./ferrun setup</code></pre>
+<h3>Linux · x64</h3><pre><code>curl --fail --location &#x27;https://ferrun-io.github.io/downloads/v0.0.3/ferrun-v0.0.3-x86_64-unknown-linux-gnu&#x27; --output ferrun &amp;&amp; chmod +x ferrun &amp;&amp; ./ferrun setup</code></pre>
         <p>
           For your company's controller, use
           <code>ferrun setup --server URL --repo OWNER/REPO</code>. Interactive sign-in
