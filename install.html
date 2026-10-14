@@ -3,8 +3,8 @@
 Copyright (c) 2026 Ferrun contributors. All rights reserved.
 
 Responsibility: Explain installation from a selected release on supported platforms.
-Connections: release_site.py publishes this page beside the verified download
-inventory and site.css.
+Connections: downloads.js reads the download directory index to show CLI commands;
+release_site.py verifies the published package files.
 -->
 
 <html lang="en">
@@ -14,6 +14,7 @@ inventory and site.css.
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Install Ferrun</title>
     <link rel="stylesheet" href="site.css" />
+    <script src="downloads.js" defer></script>
   </head>
   <body>
     <header>
@@ -25,9 +26,8 @@ inventory and site.css.
     </header>
     <!-- Use the selected release’s filenames in the installation commands. -->
     <main>
-      <h1>Install Ferrun v0.0.3</h1>
+      <h1>Install Ferrun</h1>
       <p>You do not need Rust or Python to install Ferrun.</p>
-      <p>Download the published runner bundles and SDK packages for your platform.</p>
       <section>
         <h2>1. Choose your download</h2>
         <p>
@@ -42,15 +42,15 @@ inventory and site.css.
         </ul>
         <p>
           Use the command for your platform below. Releases with a standalone CLI
-          download <code>ferrun</code> and start setup; bundle downloads include
-          separate verification and extraction commands.
+          download <code>ferrun</code> and start setup. For bundle downloads, first save
+          the archive and checksum, then use the extraction command below.
         </p>
       </section>
       <section>
         <h2>2. Install and connect</h2>
         <p>Run the command for your computer in a terminal.</p>
-        <h3>Linux · ARM64</h3><pre><code>curl --fail --location &#x27;https://ferrun-io.github.io/downloads/v0.0.3/ferrun-v0.0.3-aarch64-unknown-linux-gnu&#x27; --output ferrun &amp;&amp; chmod +x ferrun &amp;&amp; ./ferrun setup</code></pre>
-<h3>Linux · x64</h3><pre><code>curl --fail --location &#x27;https://ferrun-io.github.io/downloads/v0.0.3/ferrun-v0.0.3-x86_64-unknown-linux-gnu&#x27; --output ferrun &amp;&amp; chmod +x ferrun &amp;&amp; ./ferrun setup</code></pre>
+        <div data-downloads="install" aria-live="polite">Loading downloads…</div>
+        <noscript>Enable JavaScript to list the installation commands.</noscript>
         <p>
           For your company's controller, use
           <code>ferrun setup --server URL --repo OWNER/REPO</code>. Interactive sign-in

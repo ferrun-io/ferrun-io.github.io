@@ -1,0 +1,45 @@
+{
+  "v0.0.1": {
+    "ferrun-v0.0.1-aarch64-pc-windows-msvc.zip": 9550917,
+    "ferrun-v0.0.1-aarch64-apple-darwin.tar.gz": 9629662,
+    "ferrun-v0.0.1-aarch64-unknown-linux-gnu.tar.gz": 10636717,
+    "ferrun-v0.0.1-aarch64-pc-windows-msvc.zip.sha256": 108,
+    "ferrun-v0.0.1-aarch64-apple-darwin.tar.gz.sha256": 108,
+    "ferrun-v0.0.1-aarch64-unknown-linux-gnu.tar.gz.sha256": 113,
+    "release-notes.txt": 216
+  },
+  "v0.0.2": {
+    "ferrun_pipeline-0.0.2-cp310-abi3-manylinux_2_34_x86_64.whl": 1080379,
+    "ferrun-v0.0.2-x86_64-unknown-linux-gnu.tar.gz": 15801433,
+    "ferrun_pipeline-0.0.2-cp310-abi3-manylinux_2_34_aarch64.whl": 1017326,
+    "ferrun-v0.0.2-aarch64-unknown-linux-gnu.tar.gz": 15628823,
+    "ferrun-pipeline-0.0.2-x86_64-unknown-linux-gnu.tgz": 770724,
+    "ferrun-pipeline-0.0.2-aarch64-unknown-linux-gnu.tgz": 702957,
+    "ferrun_pipeline-0.0.2-cp310-abi3-manylinux_2_34_x86_64.whl.sha256": 125,
+    "ferrun-v0.0.2-x86_64-unknown-linux-gnu.tar.gz.sha256": 112,
+    "ferrun_pipeline-0.0.2-cp310-abi3-manylinux_2_34_aarch64.whl.sha256": 126,
+    "ferrun-v0.0.2-aarch64-unknown-linux-gnu.tar.gz.sha256": 113,
+    "ferrun-pipeline-0.0.2-x86_64-unknown-linux-gnu.tgz.sha256": 117,
+    "ferrun-pipeline-0.0.2-aarch64-unknown-linux-gnu.tgz.sha256": 118,
+    "release-notes.txt": 264
+  },
+  "v0.0.3": {
+    "ferrun-v0.0.3-aarch64-unknown-linux-gnu.tar.gz": 16840507,
+    "ferrun-pipeline-0.0.3-x86_64-unknown-linux-gnu.tgz": 771480,
+    "ferrun_pipeline-0.0.3-cp310-abi3-manylinux_2_34_x86_64.whl": 1081060,
+    "ferrun-v0.0.3-aarch64-unknown-linux-gnu": 11066152,
+    "ferrun-pipeline-0.0.3-aarch64-unknown-linux-gnu.tgz": 703728,
+    "ferrun-v0.0.3-x86_64-unknown-linux-gnu": 11733472,
+    "ferrun-v0.0.3-x86_64-unknown-linux-gnu.tar.gz": 17049940,
+    "ferrun_pipeline-0.0.3-cp310-abi3-manylinux_2_34_aarch64.whl": 1017113,
+    "ferrun-v0.0.3-aarch64-unknown-linux-gnu.tar.gz.sha256": 113,
+    "ferrun-pipeline-0.0.3-x86_64-unknown-linux-gnu.tgz.sha256": 117,
+    "ferrun_pipeline-0.0.3-cp310-abi3-manylinux_2_34_x86_64.whl.sha256": 125,
+    "ferrun-v0.0.3-aarch64-unknown-linux-gnu.sha256": 106,
+    "ferrun-pipeline-0.0.3-aarch64-unknown-linux-gnu.tgz.sha256": 118,
+    "ferrun-v0.0.3-x86_64-unknown-linux-gnu.sha256": 105,
+    "ferrun-v0.0.3-x86_64-unknown-linux-gnu.tar.gz.sha256": 112,
+    "ferrun_pipeline-0.0.3-cp310-abi3-manylinux_2_34_aarch64.whl.sha256": 126,
+    "release-notes.txt": 67
+  }
+}

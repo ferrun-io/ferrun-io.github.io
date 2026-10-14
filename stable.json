@@ -1,0 +1,63 @@
+{
+  "algorithm": "RS256",
+  "payload": {
+    "format": 1,
+    "releases": [
+      {
+        "components": [
+          {
+            "bytes": 11066152,
+            "file": "ferrun-v0.0.3-aarch64-unknown-linux-gnu",
+            "kind": "ferrun",
+            "sha256": "30a1be6c8ed2d36aa4701722f76ed0cb1885f62eddaca0b95fa7aa8fb1e586f4"
+          },
+          {
+            "bytes": 16106896,
+            "file": "executor-v0.0.3-aarch64-unknown-linux-gnu",
+            "kind": "executor",
+            "sha256": "fe9cb2c9fd934cb25279747c39e1cd154a9df23e96d4d32cfcb73f83c5d86abe"
+          },
+          {
+            "bytes": 19870560,
+            "file": "control-plane-v0.0.3-aarch64-unknown-linux-gnu",
+            "kind": "control-plane",
+            "sha256": "0ff067c1e66713ab0be3050b1eb495b423735a83de4fa95d4a8ced4d477c0901"
+          }
+        ],
+        "runner_version": "2.337.0",
+        "source_commit": "e7a4112f53044790b25f71a4d3b539e1d1e8644c",
+        "stable": true,
+        "target": "aarch64-unknown-linux-gnu",
+        "version": "0.0.3"
+      },
+      {
+        "components": [
+          {
+            "bytes": 11733472,
+            "file": "ferrun-v0.0.3-x86_64-unknown-linux-gnu",
+            "kind": "ferrun",
+            "sha256": "4557ed42fa4443bdaa58d7b1cab64a683156fd4fd12efb382e76966247f7ebe3"
+          },
+          {
+            "bytes": 16980584,
+            "file": "executor-v0.0.3-x86_64-unknown-linux-gnu",
+            "kind": "executor",
+            "sha256": "5e98e7574428673c24b2610fe1fedaa1aa2b5b2b61945b949ef80943253284f6"
+          },
+          {
+            "bytes": 21121600,
+            "file": "control-plane-v0.0.3-x86_64-unknown-linux-gnu",
+            "kind": "control-plane",
+            "sha256": "0d3b89d0121809a1009831b63f458b94186737f69d167c56bbddc6d10b121708"
+          }
+        ],
+        "runner_version": "2.337.0",
+        "source_commit": "e7a4112f53044790b25f71a4d3b539e1d1e8644c",
+        "stable": true,
+        "target": "x86_64-unknown-linux-gnu",
+        "version": "0.0.3"
+      }
+    ]
+  },
+  "signature": "h3i5Sw6n5E9DlltkVJbNUkU63Nhv5BVXU6JAHbV132fkEliPnlOQ8LAqV0tYSwM3aqzxI6raB/hZgpyLnYesNfpU4O9uofnx84L9/VI8jhs1gV7nIIUSBdGLryDqc86x1kpNbfJOVtZ6ndiqL809EC2KW/343/61Tvj15shc/tfkOQ85ix4cM6g4QlJG4D4eFtnea/2zFg/Z7djF/A3ZZl3/k0K6usE8YCxUwMtSDo06dSNuMXJkv2ru8fCS/Gzc9WTTUIpuxfvMjtiok3YtM2NZHXgnK2KkkDCtx7gcrho2HKJBrjP+l5bO8i6A3WppMczjGhg07oqhvjltF6BZUw=="
+}

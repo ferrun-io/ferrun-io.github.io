@@ -1,9 +1,9 @@
 /*
 Copyright (c) 2026 Ferrun contributors. All rights reserved.
 
-Responsibility: Style the generated release pages with readable responsive layouts.
-Connections: Site templates load this stylesheet when release_site.py builds the
-verified download website.
+Responsibility: Keep release pages readable across screen sizes.
+Connections: The static pages and downloads.js share these navigation and download
+list styles.
 */
 
 /* Use the browser’s light colors and system fonts for the release pages. */
