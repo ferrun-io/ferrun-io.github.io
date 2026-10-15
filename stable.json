@@ -6,58 +6,58 @@
       {
         "components": [
           {
-            "bytes": 11066152,
-            "file": "ferrun-v0.0.3-aarch64-unknown-linux-gnu",
+            "bytes": 10935512,
+            "file": "ferrun-v0.0.4-aarch64-unknown-linux-gnu",
             "kind": "ferrun",
-            "sha256": "30a1be6c8ed2d36aa4701722f76ed0cb1885f62eddaca0b95fa7aa8fb1e586f4"
+            "sha256": "653cc6e9e59806052b907994dfdcd53a28d63722bae36cc54524b9ce011702d1"
           },
           {
-            "bytes": 16106896,
-            "file": "executor-v0.0.3-aarch64-unknown-linux-gnu",
+            "bytes": 15973240,
+            "file": "executor-v0.0.4-aarch64-unknown-linux-gnu",
             "kind": "executor",
-            "sha256": "fe9cb2c9fd934cb25279747c39e1cd154a9df23e96d4d32cfcb73f83c5d86abe"
+            "sha256": "9e3497d769f959dfe72a7903736c7a6989d9a56a604d1fa514f03c33c88fde7f"
           },
           {
-            "bytes": 19870560,
-            "file": "control-plane-v0.0.3-aarch64-unknown-linux-gnu",
+            "bytes": 20336952,
+            "file": "control-plane-v0.0.4-aarch64-unknown-linux-gnu",
             "kind": "control-plane",
-            "sha256": "0ff067c1e66713ab0be3050b1eb495b423735a83de4fa95d4a8ced4d477c0901"
+            "sha256": "0afd03f4246bc15474fef066fec683220eead4e78e0aeb34800f77c5dc48d7e2"
           }
         ],
         "runner_version": "2.337.0",
-        "source_commit": "e7a4112f53044790b25f71a4d3b539e1d1e8644c",
+        "source_commit": "ce0e275fd94a8d8e083f324607cd198a87c83534",
         "stable": true,
         "target": "aarch64-unknown-linux-gnu",
-        "version": "0.0.3"
+        "version": "0.0.4"
       },
       {
         "components": [
           {
-            "bytes": 11733472,
-            "file": "ferrun-v0.0.3-x86_64-unknown-linux-gnu",
+            "bytes": 11729608,
+            "file": "ferrun-v0.0.4-x86_64-unknown-linux-gnu",
             "kind": "ferrun",
-            "sha256": "4557ed42fa4443bdaa58d7b1cab64a683156fd4fd12efb382e76966247f7ebe3"
+            "sha256": "e5cf51cffb5f77f4ef2cea44da2eb0d776a1e8b5f347c5cc69133d15454fe007"
           },
           {
-            "bytes": 16980584,
-            "file": "executor-v0.0.3-x86_64-unknown-linux-gnu",
+            "bytes": 16982816,
+            "file": "executor-v0.0.4-x86_64-unknown-linux-gnu",
             "kind": "executor",
-            "sha256": "5e98e7574428673c24b2610fe1fedaa1aa2b5b2b61945b949ef80943253284f6"
+            "sha256": "ab928dc788d70fcaeb3c47bcfa4f2b9cd10e05d70afa740d8fcd957ab6967df4"
           },
           {
-            "bytes": 21121600,
-            "file": "control-plane-v0.0.3-x86_64-unknown-linux-gnu",
+            "bytes": 21726080,
+            "file": "control-plane-v0.0.4-x86_64-unknown-linux-gnu",
             "kind": "control-plane",
-            "sha256": "0d3b89d0121809a1009831b63f458b94186737f69d167c56bbddc6d10b121708"
+            "sha256": "c12068ae03f106479ab88b585eefc166c01b89165c7e4517c3d605025065b596"
           }
         ],
         "runner_version": "2.337.0",
-        "source_commit": "e7a4112f53044790b25f71a4d3b539e1d1e8644c",
+        "source_commit": "ce0e275fd94a8d8e083f324607cd198a87c83534",
         "stable": true,
         "target": "x86_64-unknown-linux-gnu",
-        "version": "0.0.3"
+        "version": "0.0.4"
       }
     ]
   },
-  "signature": "h3i5Sw6n5E9DlltkVJbNUkU63Nhv5BVXU6JAHbV132fkEliPnlOQ8LAqV0tYSwM3aqzxI6raB/hZgpyLnYesNfpU4O9uofnx84L9/VI8jhs1gV7nIIUSBdGLryDqc86x1kpNbfJOVtZ6ndiqL809EC2KW/343/61Tvj15shc/tfkOQ85ix4cM6g4QlJG4D4eFtnea/2zFg/Z7djF/A3ZZl3/k0K6usE8YCxUwMtSDo06dSNuMXJkv2ru8fCS/Gzc9WTTUIpuxfvMjtiok3YtM2NZHXgnK2KkkDCtx7gcrho2HKJBrjP+l5bO8i6A3WppMczjGhg07oqhvjltF6BZUw=="
+  "signature": "McVasbxrnplJvG+BzoqFxJt4cNbE/tglv5znS7QeIBCoQQKH4lEdIdRciz8FwA0VjTIjCQqr39MoXdV84hKJORrpHpRpA1yX8gBdDt8NamJIeyKmt/cXglgxqJLyfjgnobVrM+2C59tw2CrAqIkL777uiQQZznoijwMpz+h/wJCu9XESWp1ZhpXcn7PgMYVuWXRO2Wnojrsz0QhKpk8MqvuoZKnYjNZB1TRRAG2T7WFWtfkx2yGHSB2Wrt4cOIgEKOoNg/AEguN9rKXLbWIfmF/8sSgDStNwBl720qoBQqkj6paPAHWZsMgV863eb0m950ccpcqTMmZ/O33iw4Spwg=="
 }
