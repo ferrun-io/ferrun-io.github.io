@@ -6,58 +6,58 @@
       {
         "components": [
           {
-            "bytes": 11013224,
-            "file": "ferrun-v0.0.5-aarch64-unknown-linux-gnu",
+            "bytes": 11014224,
+            "file": "ferrun-v0.0.6-aarch64-unknown-linux-gnu",
             "kind": "ferrun",
-            "sha256": "bc7fb9b89caf28522a6c7abb57bf1807d56a9856929f4a375dadd460c45f3902"
+            "sha256": "928906429fbfa1f104d380c388f3ea5913d74311b3baf84334425a094fbbbc72"
           },
           {
-            "bytes": 16040208,
-            "file": "executor-v0.0.5-aarch64-unknown-linux-gnu",
+            "bytes": 16041664,
+            "file": "executor-v0.0.6-aarch64-unknown-linux-gnu",
             "kind": "executor",
-            "sha256": "1a9ca6522f95c6b6b42a6de7df9de7a0cb26f9398caf19f0850b41db7c83bc87"
+            "sha256": "cd30c17fe6ebc21cb54986aa5d86c74c2aa0a6c8b9b90b57ad2bd63201dc51d3"
           },
           {
-            "bytes": 25830144,
-            "file": "control-plane-v0.0.5-aarch64-unknown-linux-gnu",
+            "bytes": 25695400,
+            "file": "control-plane-v0.0.6-aarch64-unknown-linux-gnu",
             "kind": "control-plane",
-            "sha256": "152c4cc652433f32b4e750c982ea3d90853905ae1b4fc2c79b2b39a0d07ff75a"
+            "sha256": "d5fff1f5d8c8f09cded28aba101e2c5e0ed5c27d4eda2516a2980411e74cbbd9"
           }
         ],
         "runner_version": "2.337.0",
-        "source_commit": "8e9d15d8e969b172f591c92353b624c31ee69019",
+        "source_commit": "260bff508b546b6a1fc0e3715096e9b556451487",
         "stable": true,
         "target": "aarch64-unknown-linux-gnu",
-        "version": "0.0.5"
+        "version": "0.0.6"
       },
       {
         "components": [
           {
-            "bytes": 11786064,
-            "file": "ferrun-v0.0.5-x86_64-unknown-linux-gnu",
+            "bytes": 11782240,
+            "file": "ferrun-v0.0.6-x86_64-unknown-linux-gnu",
             "kind": "ferrun",
-            "sha256": "2bc1991bcefd406937a522e8b3b0a68f5dc44bb26960126843a90d7aba89a27e"
+            "sha256": "fa292de0decd16f71093a91fa487cb5a55ea3e2d76dac69b992a8fdad116f6f0"
           },
           {
-            "bytes": 16981864,
-            "file": "executor-v0.0.5-x86_64-unknown-linux-gnu",
+            "bytes": 16982168,
+            "file": "executor-v0.0.6-x86_64-unknown-linux-gnu",
             "kind": "executor",
-            "sha256": "07451a26b21d743d371d748765a96d3ffad26303ba78d528c2f2cf5daefb08f1"
+            "sha256": "64baed55d815303321eaea3c2f921a33d88bebe2ddf0686c12f70d7c749e634b"
           },
           {
-            "bytes": 27583848,
-            "file": "control-plane-v0.0.5-x86_64-unknown-linux-gnu",
+            "bytes": 27383256,
+            "file": "control-plane-v0.0.6-x86_64-unknown-linux-gnu",
             "kind": "control-plane",
-            "sha256": "e721bcd53057e324bccb73eda8d89b3998bbe706ce7008a5c4b93089fb91b168"
+            "sha256": "50c47ffa226748917c6d225001ee67dfac7439c8594c95612757fd2dc70f2f86"
           }
         ],
         "runner_version": "2.337.0",
-        "source_commit": "8e9d15d8e969b172f591c92353b624c31ee69019",
+        "source_commit": "260bff508b546b6a1fc0e3715096e9b556451487",
         "stable": true,
         "target": "x86_64-unknown-linux-gnu",
-        "version": "0.0.5"
+        "version": "0.0.6"
       }
     ]
   },
-  "signature": "byUnt8X7nRJQTBgUTSZ6o9D3kzTZ+IChM3m9fnhZTG6gHeyDccfu4nLMlGiuYVZdjLPd83Q34BNx23hil97RPBr+I6fTtEExJx00if4FVVNpLCM4z/BARXoIKRLzPS+dYA/vEgt4M8uLPB/ZsP6xBIftSyWjOQB+E7OcoKe/+DOByo0vE1bryrlRCpowy3xX52zsJmeJEUrGf+VvbBEcXmt5N/8CY/FbE1cctcIXaDAVHiOGqmV+V29c/k7tWKvmC1VnjFkjym1M5kEithmmKkEmZOYK8o2BxOQoxpsLoOf8DiBMu5QmOGhIaam70oqw2lW2Z2O899DpE1qY0H4eGQ=="
+  "signature": "RYGNH6u1HBtguN7CqEqSOmzb+LGIeTn7CvWL56rG24faEESw8/dKtvoItC07yNnOzPHTL5VUI+HKKPUjWoOlU32GirZ2jeE4Tx2OFK3L4URZ5V2uXpP4U+WoabdDWJprUze3BUcXJ/LpG4YBdkQekrT7QxL/5gXmkoCycec7l78C2eti5chrZn9NJvgXqZkqY4yESRGlPqa2ehh0aWhEDD5eHegO4bW/8H8R9r16Rv80X6BIEjiZLSXPVY2jtQSbH7YmMS8wd9VwBOF+CjfgmhhcwFplRiufG8ynVTDBPbW47MKf4bLnjci4tIz1v5T6wxGYEdKMrlEzeag861Sc6A=="
 }
