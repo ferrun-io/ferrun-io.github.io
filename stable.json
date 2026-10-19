@@ -6,58 +6,58 @@
       {
         "components": [
           {
-            "bytes": 11096320,
-            "file": "ferrun-v0.0.10-aarch64-unknown-linux-gnu",
+            "bytes": 11094376,
+            "file": "ferrun-v0.0.11-aarch64-unknown-linux-gnu",
             "kind": "ferrun",
-            "sha256": "09c48668492657221a64ba5ec901e78e74a44f59b583f529f97dbd0b11260298"
+            "sha256": "9d3eea00c78c27fa390577fed90eaa5a124094043c3b75da1de20ba24c1d76cf"
           },
           {
-            "bytes": 16613472,
-            "file": "executor-v0.0.10-aarch64-unknown-linux-gnu",
+            "bytes": 16548224,
+            "file": "executor-v0.0.11-aarch64-unknown-linux-gnu",
             "kind": "executor",
-            "sha256": "c388bb6e0817ad05c994b12e08c341e0f873cd7a90e62285a1882e207fdf28e6"
+            "sha256": "5ecbcc5756d1cb97d6c81591114f4765f6bbad2ab2d5e0ca7fb8bb23204eb9b0"
           },
           {
-            "bytes": 26682976,
-            "file": "control-plane-v0.0.10-aarch64-unknown-linux-gnu",
+            "bytes": 26794560,
+            "file": "control-plane-v0.0.11-aarch64-unknown-linux-gnu",
             "kind": "control-plane",
-            "sha256": "74e9d7bbf35a19701afdd481897fa959df69a7b90892e8c4e3e7179a2448c6ba"
+            "sha256": "a80c62d49cc9df3164737d84c92b6e7377769b74ac0bbe6c0d3fc9e67bfd0084"
           }
         ],
         "runner_version": "2.337.0",
-        "source_commit": "1542737dbdd50f5405cafcbcaf724ff7128487ab",
+        "source_commit": "8544de5ec7d120e01080ca5ab404bbf1078c8c87",
         "stable": true,
         "target": "aarch64-unknown-linux-gnu",
-        "version": "0.0.10"
+        "version": "0.0.11"
       },
       {
         "components": [
           {
-            "bytes": 11882680,
-            "file": "ferrun-v0.0.10-x86_64-unknown-linux-gnu",
+            "bytes": 11878912,
+            "file": "ferrun-v0.0.11-x86_64-unknown-linux-gnu",
             "kind": "ferrun",
-            "sha256": "a4fa5da1c803208f4ba31db8c77925c6671165568d1181119afafb756dcbc816"
+            "sha256": "94f01cfb6b0c23c0f6683286cf9b37edbd7e81c7b4673217191b96648eca7965"
           },
           {
-            "bytes": 17615256,
-            "file": "executor-v0.0.10-x86_64-unknown-linux-gnu",
+            "bytes": 17620632,
+            "file": "executor-v0.0.11-x86_64-unknown-linux-gnu",
             "kind": "executor",
-            "sha256": "c1c4877f32e81149ff3c659720c015fad548245948f4330036f324dbf2937dd5"
+            "sha256": "b45bc1aa9904a77f4f6b84da465af539a50236643ad66ba28a81c00be933a67d"
           },
           {
-            "bytes": 28481136,
-            "file": "control-plane-v0.0.10-x86_64-unknown-linux-gnu",
+            "bytes": 28638240,
+            "file": "control-plane-v0.0.11-x86_64-unknown-linux-gnu",
             "kind": "control-plane",
-            "sha256": "a40446a2875227d391d4a8afdcdf3d6a83fc448e3d8a389fe6d82ff1f91364db"
+            "sha256": "705ecc970797ed1d0e6490ef597f34f97d773de1734eccd17ea7b7a024a0ff07"
           }
         ],
         "runner_version": "2.337.0",
-        "source_commit": "1542737dbdd50f5405cafcbcaf724ff7128487ab",
+        "source_commit": "8544de5ec7d120e01080ca5ab404bbf1078c8c87",
         "stable": true,
         "target": "x86_64-unknown-linux-gnu",
-        "version": "0.0.10"
+        "version": "0.0.11"
       }
     ]
   },
-  "signature": "o92CLWsCaObiKRA3KDnE3TQoQjEBbTL3BbZV/gazdDKNyY2ZBo4MFG1EJUyxvgx5E9gBHPv/MKJxpddKXxYT59GgxL3Bs8EwhhsuNlcNPq69+Al7ZwtHqY9SojPqyJRkiGgl3nR7Hh42ItQ4ASAK9BZD4Ng4LmJw25cC0zpkLnXVKCuJ8GDN0QSUqOB6C77JA/5QSiqclecRAORhVUo6k28RsnT2dotpIqpbVQ9u9tYd73JsDFvRbnbkPsKwqbUmX2tFj9+sGN4v9MwkvX0FvpEeYz82g9cWco8ylQTcDmkPbz1FD+2Qx+EejcG6g0sZ99Xk3wxOtAiZx4gJVWPaMg=="
+  "signature": "SR4SvNXTBgDX+rN08xwxmsxv3pJUJ5oNUXtcOIZiCHg/0t/TJ2umGUe0r36EdXYNKk6LTKpHFBJ3k7MMkn0psT0mgbdrMcxSA2yYmKMLar2tXsVla/9iFF5UxuRwd3PSAA5JbWMScO7OSJkF9akP5lkesU9oxPEi+3QKjvpBQp/qgtbu0yGOInIqboYMR7yYeayvECWni+qy1ntCw0P50szuhjuMZpyN/S9qvsx0pXcIsJg30WA269KHVjA+6APJVgLQuzJJYEfw9ozHdNLOgqpUk2lYbbcime89gQ7jFBsxbZ5LXfnY1O6GZJEPCG8gNCH+D+lI1mHzYFNZyu9aaw=="
 }

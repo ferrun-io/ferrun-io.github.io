@@ -27,6 +27,25 @@
     "ferrun-pipeline-0.0.10-x86_64-unknown-linux-gnu.tgz.sha256": 118,
     "release-notes.txt": 67
   },
+  "v0.0.11": {
+    "ferrun-v0.0.11-aarch64-unknown-linux-gnu": 11094376,
+    "ferrun-v0.0.11-x86_64-unknown-linux-gnu.tar.gz": 19531838,
+    "ferrun-v0.0.11-x86_64-unknown-linux-gnu": 11878912,
+    "ferrun_pipeline-0.0.11-cp310-abi3-manylinux_2_34_x86_64.whl": 1079222,
+    "ferrun-pipeline-0.0.11-aarch64-unknown-linux-gnu.tgz": 703565,
+    "ferrun_pipeline-0.0.11-cp310-abi3-manylinux_2_34_aarch64.whl": 1012983,
+    "ferrun-pipeline-0.0.11-x86_64-unknown-linux-gnu.tgz": 773184,
+    "ferrun-v0.0.11-aarch64-unknown-linux-gnu.tar.gz": 19296232,
+    "ferrun-v0.0.11-aarch64-unknown-linux-gnu.sha256": 107,
+    "ferrun-v0.0.11-x86_64-unknown-linux-gnu.tar.gz.sha256": 113,
+    "ferrun-v0.0.11-x86_64-unknown-linux-gnu.sha256": 106,
+    "ferrun_pipeline-0.0.11-cp310-abi3-manylinux_2_34_x86_64.whl.sha256": 126,
+    "ferrun-pipeline-0.0.11-aarch64-unknown-linux-gnu.tgz.sha256": 119,
+    "ferrun_pipeline-0.0.11-cp310-abi3-manylinux_2_34_aarch64.whl.sha256": 127,
+    "ferrun-pipeline-0.0.11-x86_64-unknown-linux-gnu.tgz.sha256": 118,
+    "ferrun-v0.0.11-aarch64-unknown-linux-gnu.tar.gz.sha256": 114,
+    "release-notes.txt": 67
+  },
   "v0.0.2": {
     "ferrun_pipeline-0.0.2-cp310-abi3-manylinux_2_34_x86_64.whl": 1080379,
     "ferrun-v0.0.2-x86_64-unknown-linux-gnu.tar.gz": 15801433,
