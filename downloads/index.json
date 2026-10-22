@@ -84,6 +84,25 @@
     "ferrun-v0.0.13-x86_64-unknown-linux-gnu.sha256": 106,
     "release-notes.txt": 67
   },
+  "v0.0.14": {
+    "ferrun-v0.0.14-x86_64-unknown-linux-gnu.tar.gz": 20036544,
+    "ferrun_pipeline-0.0.14-cp310-abi3-manylinux_2_34_aarch64.whl": 1012416,
+    "ferrun-v0.0.14-aarch64-unknown-linux-gnu.tar.gz": 19825289,
+    "ferrun-v0.0.14-x86_64-unknown-linux-gnu": 12504376,
+    "ferrun-pipeline-0.0.14-x86_64-unknown-linux-gnu.tgz": 774422,
+    "ferrun-v0.0.14-aarch64-unknown-linux-gnu": 11643760,
+    "ferrun-pipeline-0.0.14-aarch64-unknown-linux-gnu.tgz": 703518,
+    "ferrun_pipeline-0.0.14-cp310-abi3-manylinux_2_34_x86_64.whl": 1080494,
+    "ferrun-v0.0.14-x86_64-unknown-linux-gnu.tar.gz.sha256": 113,
+    "ferrun_pipeline-0.0.14-cp310-abi3-manylinux_2_34_aarch64.whl.sha256": 127,
+    "ferrun-v0.0.14-aarch64-unknown-linux-gnu.tar.gz.sha256": 114,
+    "ferrun-v0.0.14-x86_64-unknown-linux-gnu.sha256": 106,
+    "ferrun-pipeline-0.0.14-x86_64-unknown-linux-gnu.tgz.sha256": 118,
+    "ferrun-v0.0.14-aarch64-unknown-linux-gnu.sha256": 107,
+    "ferrun-pipeline-0.0.14-aarch64-unknown-linux-gnu.tgz.sha256": 119,
+    "ferrun_pipeline-0.0.14-cp310-abi3-manylinux_2_34_x86_64.whl.sha256": 126,
+    "release-notes.txt": 67
+  },
   "v0.0.2": {
     "ferrun_pipeline-0.0.2-cp310-abi3-manylinux_2_34_x86_64.whl": 1080379,
     "ferrun-v0.0.2-x86_64-unknown-linux-gnu.tar.gz": 15801433,
