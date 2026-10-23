@@ -1,0 +1,63 @@
+{
+  "algorithm": "RS256",
+  "payload": {
+    "format": 1,
+    "releases": [
+      {
+        "components": [
+          {
+            "bytes": 11638904,
+            "file": "ferrun-v0.0.15-aarch64-unknown-linux-gnu",
+            "kind": "ferrun",
+            "sha256": "9196094dadd176c81904be2cbc9d85b022e036b72d804f6e404f5bc1d72bae13"
+          },
+          {
+            "bytes": 16955384,
+            "file": "executor-v0.0.15-aarch64-unknown-linux-gnu",
+            "kind": "executor",
+            "sha256": "d45373fbed512eb70b43eff20c96e67e8aaa2bed5ae09782c98c95831917654f"
+          },
+          {
+            "bytes": 30200416,
+            "file": "control-plane-v0.0.15-aarch64-unknown-linux-gnu",
+            "kind": "control-plane",
+            "sha256": "043c2a90e3478255b5ca0a2ec277f363f912e5846faccd64e3db0ad426a6aa97"
+          }
+        ],
+        "runner_version": "2.337.0",
+        "source_commit": "ab21fe729ebfe2dd8886a82295f97177eebd17e9",
+        "stable": true,
+        "target": "aarch64-unknown-linux-gnu",
+        "version": "0.0.15"
+      },
+      {
+        "components": [
+          {
+            "bytes": 12518480,
+            "file": "ferrun-v0.0.15-x86_64-unknown-linux-gnu",
+            "kind": "ferrun",
+            "sha256": "16381cda5d882a45d3532a5e908baf5f6a444af1dfa201cffca80d4d0a1ce06d"
+          },
+          {
+            "bytes": 18042552,
+            "file": "executor-v0.0.15-x86_64-unknown-linux-gnu",
+            "kind": "executor",
+            "sha256": "16e169851bb4ee55d3fd30e6d4e96358ebc9fcc5250a7e7c3db906c05c4676f5"
+          },
+          {
+            "bytes": 32513320,
+            "file": "control-plane-v0.0.15-x86_64-unknown-linux-gnu",
+            "kind": "control-plane",
+            "sha256": "4432bbffe608cb286d1f67d8ab36b5b2b982dfafc8353668f465e535ab910a25"
+          }
+        ],
+        "runner_version": "2.337.0",
+        "source_commit": "ab21fe729ebfe2dd8886a82295f97177eebd17e9",
+        "stable": true,
+        "target": "x86_64-unknown-linux-gnu",
+        "version": "0.0.15"
+      }
+    ]
+  },
+  "signature": "oAi8XCCRMRh0wLbSvfIW9aLWRr+KY7zn5z20Y+SnTOto46FwbmGXxrn8AbTa5ILwspuacws8KirIuytlGBA5RwvVz2LhSxKAX3UtbpHIavrubCvSOKh5ZQACtW3wavVKSwJjtFFN+KBG9TWFlZ+gZPLwPepr0WwWVS8Dpmzn43am+JsWqjAhGU+dowiUWBAme61JnmbbDe0yB682XI5jlfaa++hM6WnUsWH4Iv/1H/Rh3X8c7+Yu5BA/UAeoLXAas2H9CduCeZBnbRouHzKMtvF8izdxe85gybbztWWczmSnYGjVNv733nmhEMATlGpbAVXw0YEs2zcwTpeB5oeHtA=="
+}
