@@ -6,58 +6,58 @@
       {
         "components": [
           {
-            "bytes": 11638904,
-            "file": "ferrun-v0.0.15-aarch64-unknown-linux-gnu",
+            "bytes": 11641152,
+            "file": "ferrun-v0.0.16-aarch64-unknown-linux-gnu",
             "kind": "ferrun",
-            "sha256": "9196094dadd176c81904be2cbc9d85b022e036b72d804f6e404f5bc1d72bae13"
+            "sha256": "57f20c57d3a430286082b596dc445690b81357a7082078ef87cc3eb6c7bca43c"
           },
           {
-            "bytes": 16955384,
-            "file": "executor-v0.0.15-aarch64-unknown-linux-gnu",
+            "bytes": 16956336,
+            "file": "executor-v0.0.16-aarch64-unknown-linux-gnu",
             "kind": "executor",
-            "sha256": "d45373fbed512eb70b43eff20c96e67e8aaa2bed5ae09782c98c95831917654f"
+            "sha256": "e54993dfdc5933cacb554a46c9f98e5dc22395a3706026bb514c116403deb823"
           },
           {
-            "bytes": 30200416,
-            "file": "control-plane-v0.0.15-aarch64-unknown-linux-gnu",
+            "bytes": 32862944,
+            "file": "control-plane-v0.0.16-aarch64-unknown-linux-gnu",
             "kind": "control-plane",
-            "sha256": "043c2a90e3478255b5ca0a2ec277f363f912e5846faccd64e3db0ad426a6aa97"
+            "sha256": "16c449f40cf986299dfdf88121374c46e796833747dae38b2de91ee39051d0b3"
           }
         ],
         "runner_version": "2.337.0",
-        "source_commit": "ab21fe729ebfe2dd8886a82295f97177eebd17e9",
+        "source_commit": "ad670222a83a5076c0f428e76f710d071c0261cb",
         "stable": true,
         "target": "aarch64-unknown-linux-gnu",
-        "version": "0.0.15"
+        "version": "0.0.16"
       },
       {
         "components": [
           {
-            "bytes": 12518480,
-            "file": "ferrun-v0.0.15-x86_64-unknown-linux-gnu",
+            "bytes": 12514864,
+            "file": "ferrun-v0.0.16-x86_64-unknown-linux-gnu",
             "kind": "ferrun",
-            "sha256": "16381cda5d882a45d3532a5e908baf5f6a444af1dfa201cffca80d4d0a1ce06d"
+            "sha256": "8efddd6fc2540873fd94368a709b2253c9360b5d88788a3cdaf8de290ef72e4f"
           },
           {
-            "bytes": 18042552,
-            "file": "executor-v0.0.15-x86_64-unknown-linux-gnu",
+            "bytes": 18046048,
+            "file": "executor-v0.0.16-x86_64-unknown-linux-gnu",
             "kind": "executor",
-            "sha256": "16e169851bb4ee55d3fd30e6d4e96358ebc9fcc5250a7e7c3db906c05c4676f5"
+            "sha256": "436bf80840359a70448b5220cf293b75e7fa74e36466367180f687be2e622a53"
           },
           {
-            "bytes": 32513320,
-            "file": "control-plane-v0.0.15-x86_64-unknown-linux-gnu",
+            "bytes": 35043800,
+            "file": "control-plane-v0.0.16-x86_64-unknown-linux-gnu",
             "kind": "control-plane",
-            "sha256": "4432bbffe608cb286d1f67d8ab36b5b2b982dfafc8353668f465e535ab910a25"
+            "sha256": "d97c33ea68d3d7a77c34e148f166122d72d78960bd3006b9979e520f29404c5d"
           }
         ],
         "runner_version": "2.337.0",
-        "source_commit": "ab21fe729ebfe2dd8886a82295f97177eebd17e9",
+        "source_commit": "ad670222a83a5076c0f428e76f710d071c0261cb",
         "stable": true,
         "target": "x86_64-unknown-linux-gnu",
-        "version": "0.0.15"
+        "version": "0.0.16"
       }
     ]
   },
-  "signature": "oAi8XCCRMRh0wLbSvfIW9aLWRr+KY7zn5z20Y+SnTOto46FwbmGXxrn8AbTa5ILwspuacws8KirIuytlGBA5RwvVz2LhSxKAX3UtbpHIavrubCvSOKh5ZQACtW3wavVKSwJjtFFN+KBG9TWFlZ+gZPLwPepr0WwWVS8Dpmzn43am+JsWqjAhGU+dowiUWBAme61JnmbbDe0yB682XI5jlfaa++hM6WnUsWH4Iv/1H/Rh3X8c7+Yu5BA/UAeoLXAas2H9CduCeZBnbRouHzKMtvF8izdxe85gybbztWWczmSnYGjVNv733nmhEMATlGpbAVXw0YEs2zcwTpeB5oeHtA=="
+  "signature": "Ei2y+zEOd6cQrZhK2QioioentbN8GZ3NbfGNs+TnKjlW4tlFrC4sJfxbRx1+48Q+LhLYhtF3rBT2NyCsjKr2uQh++IX00DX441oHhkiqZibMS2cLNpsfovwKFfM0ocTMlSCtU392ahksu/r8/vXpVV+IPZxDdDelFojM7TkPt7J3sog7z2ppnnBnEiOb0qyznHRyy3loR2f4I3jqR+6o6+eOP4XgEnDcGGj3YhweOQ+bT5+B4hMvkWmG6pw6ocK4EsGr26Pr9efKKyZf7OS6aRXs2+pupDRJNMKr7lesv2KbLVYy9LoLFcDWgm2nvBjiD6chbksXygY1b9Rxrkw+qg=="
 }
