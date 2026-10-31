@@ -1,5 +1,0 @@
-Ferrun v0.0.1
-
-Download ARM64 runner bundles for Linux, Windows and Apple silicon Macs from https://ferrun-io.github.io/.
-
-This release contains runner bundles. It does not contain Python or JavaScript SDK packages.

@@ -1,1 +1,0 @@
-Download runner bundles and SDKs from https://ferrun-io.github.io/.

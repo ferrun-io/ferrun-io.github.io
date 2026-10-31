@@ -126,9 +126,6 @@ function render(root, inventory) {
       list.append(row);
     }
     section.append(list);
-    if ('release-notes.txt' in files) {
-      section.append(link('Release notes', `downloads/${version}/release-notes.txt`));
-    }
     content.append(section);
   }
   root.replaceChildren(

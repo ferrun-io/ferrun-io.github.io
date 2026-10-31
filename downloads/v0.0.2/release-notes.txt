@@ -1,5 +1,0 @@
-Ferrun v0.0.2
-
-Download Linux x64 and ARM64 runner bundles, Python wheels and JavaScript/TypeScript packages from https://ferrun-io.github.io/.
-
-Python and JavaScript/TypeScript packages in this release require Linux. They cannot be installed on macOS or Windows.
