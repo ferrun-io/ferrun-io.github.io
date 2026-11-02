@@ -1,0 +1,22 @@
+/*
+Copyright (c) 2026 Ferrun contributors. All rights reserved.
+
+Responsibility: Load the UI and code font faces used by Ferrun UI.
+Connections: theme.css names these faces; fonts/ retains the pinned files and
+their unchanged upstream licence and provenance.
+*/
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url('fonts/dm-sans.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/dm-mono.woff2') format('woff2');
+}

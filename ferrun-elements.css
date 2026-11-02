@@ -1,0 +1,461 @@
+/*
+Copyright (c) 2026 Ferrun contributors. All rights reserved.
+
+Responsibility: Style native HTML elements and Ferrun control variants.
+Connections: theme.css supplies shared tokens; the control panel,
+installer, release site and log example load these element styles.
+*/
+
+/* Native elements use the same defaults in every feature's HTML. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-family: var(--ferrun-font-sans);
+  font-size: 100%;
+  line-height: var(--ferrun-line-height);
+  background: var(--ferrun-color-page);
+  color: var(--ferrun-color-text);
+  text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-size: var(--ferrun-text-body);
+  line-height: var(--ferrun-leading-body);
+}
+small,
+code {
+  font-size: var(--ferrun-text-secondary);
+  line-height: var(--ferrun-leading-secondary);
+}
+small {
+  color: var(--ferrun-color-muted);
+}
+[hidden] {
+  display: none !important;
+}
+::selection {
+  background: var(--ferrun-color-selection);
+  color: var(--ferrun-color-text);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ferrun-color-heading);
+}
+p,
+ul,
+ol,
+dl,
+pre,
+figure,
+fieldset,
+details {
+  margin: 0 0 var(--ferrun-space-16);
+}
+ul,
+ol {
+  padding-inline-start: var(--ferrun-space-24);
+}
+li + li {
+  margin-block-start: var(--ferrun-space-8);
+}
+p {
+  max-width: var(--ferrun-prose-width);
+}
+form,
+fieldset {
+  min-width: 0;
+}
+form {
+  margin: 0;
+}
+fieldset {
+  padding: 0;
+  border: 0;
+}
+legend {
+  padding: 0;
+  margin-block-end: var(--ferrun-space-12);
+  font-weight: var(--ferrun-heading-weight);
+}
+label {
+  display: block;
+  font-size: var(--ferrun-text-body);
+  line-height: var(--ferrun-leading-body);
+  margin-block-end: var(--ferrun-space-8);
+}
+form > label,
+fieldset > label {
+  margin-block-end: var(--ferrun-space-16);
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+input:not(
+  [type='checkbox'],
+  [type='radio'],
+  [type='hidden'],
+  [type='button'],
+  [type='submit'],
+  [type='reset']
+),
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin: 0 0 var(--ferrun-space-16);
+  padding: var(--ferrun-space-8) var(--ferrun-space-12);
+  border: var(--ferrun-border-width) solid var(--ferrun-color-control-border);
+  background: var(--ferrun-color-surface);
+  color: var(--ferrun-color-text);
+}
+input[type='search'] {
+  appearance: none;
+}
+textarea {
+  resize: vertical;
+}
+label > :is(input, select, textarea) {
+  margin-block: var(--ferrun-space-8) 0;
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--ferrun-color-muted);
+  opacity: 1;
+}
+:is(input, select, textarea):focus {
+  border-color: var(--ferrun-color-link);
+}
+[aria-invalid='true'] {
+  border-color: var(--ferrun-color-danger);
+}
+:is(button, input, select, textarea):disabled,
+[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+input[type='checkbox'],
+input[type='radio'] {
+  width: var(--ferrun-space-16);
+  height: var(--ferrun-space-16);
+  accent-color: var(--ferrun-color-link);
+}
+form small {
+  display: block;
+  margin-block: var(--ferrun-space-8) var(--ferrun-space-16);
+}
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--ferrun-font-mono);
+}
+code,
+kbd {
+  padding: 0 var(--ferrun-space-4);
+  border-radius: var(--ferrun-radius-control);
+  background: var(--ferrun-color-surface-subtle);
+}
+pre {
+  overflow-x: auto;
+  white-space: pre;
+  overflow-wrap: normal;
+  font-size: var(--ferrun-text-secondary);
+  line-height: var(--ferrun-leading-secondary);
+  padding: var(--ferrun-space-12);
+  border: var(--ferrun-border-width) solid var(--ferrun-color-border);
+  border-radius: var(--ferrun-radius-control);
+  background: var(--ferrun-color-surface);
+}
+pre code,
+pre samp {
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+  background: transparent;
+}
+mark {
+  background: var(--ferrun-color-selection);
+  color: var(--ferrun-color-text);
+}
+table {
+  table-layout: auto;
+  font-size: var(--ferrun-text-body);
+  line-height: var(--ferrun-leading-body);
+  width: 100%;
+  border-collapse: collapse;
+  margin-block-end: var(--ferrun-space-16);
+  text-align: left;
+}
+thead {
+  font-size: var(--ferrun-text-secondary);
+  line-height: var(--ferrun-leading-secondary);
+}
+th,
+td {
+  padding: var(--ferrun-space-8) var(--ferrun-space-12);
+  vertical-align: top;
+  border-bottom: var(--ferrun-border-width) solid var(--ferrun-color-border);
+}
+th {
+  font-weight: var(--ferrun-heading-weight);
+  color: var(--ferrun-color-muted);
+}
+dt {
+  font-weight: var(--ferrun-heading-weight);
+}
+dd {
+  margin-inline-start: 0;
+}
+hr {
+  margin-block: var(--ferrun-space-24);
+  border: 0;
+  border-top: var(--ferrun-border-width) solid var(--ferrun-color-border);
+}
+details > summary {
+  cursor: pointer;
+  list-style: none;
+  gap: var(--ferrun-space-8);
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+details:not(.work-item) > summary::after {
+  content: '';
+  width: var(--ferrun-space-8);
+  height: var(--ferrun-space-8);
+  margin-inline-start: auto;
+  margin-inline-end: var(--ferrun-space-4);
+  border-inline-end: var(--ferrun-border-width) solid currentColor;
+  border-block-end: var(--ferrun-border-width) solid currentColor;
+  transform: rotate(-45deg);
+  flex-shrink: 0;
+}
+details[open]:not(.work-item) > summary::after {
+  transform: rotate(45deg);
+}
+details[open] > summary {
+  margin-block-end: var(--ferrun-space-12);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--ferrun-heading-weight);
+  margin-block-start: 0;
+}
+h1 {
+  font-size: var(--ferrun-text-title);
+  line-height: var(--ferrun-leading-title);
+  margin-bottom: var(--ferrun-space-16);
+}
+h2 {
+  font-size: var(--ferrun-text-heading);
+  line-height: var(--ferrun-leading-heading);
+  margin-bottom: var(--ferrun-space-8);
+}
+h3 {
+  font-size: var(--ferrun-text-body);
+  line-height: var(--ferrun-leading-body);
+  margin-bottom: var(--ferrun-space-8);
+}
+
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+[role='button'] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-height: var(--ferrun-control-size);
+  padding: var(--ferrun-space-8) var(--ferrun-space-12);
+  font-size: var(--ferrun-text-body);
+  line-height: var(--ferrun-leading-body);
+  border-radius: var(--ferrun-radius-control);
+  border: var(--ferrun-border-width) solid var(--ferrun-color-action);
+  background: var(--ferrun-color-action);
+  color: var(--ferrun-color-action-text);
+  cursor: pointer;
+  text-decoration: none;
+}
+button:hover,
+input:is([type='button'], [type='submit'], [type='reset']):hover,
+[role='button']:hover {
+  border-color: var(--ferrun-color-action-hover);
+  background: var(--ferrun-color-action-hover);
+  color: var(--ferrun-color-action-text);
+}
+button.button-secondary,
+[role='button'].button-secondary {
+  background: transparent;
+  border-color: var(--ferrun-color-control-border);
+  color: var(--ferrun-color-muted);
+  box-shadow: none;
+}
+button.button-secondary:hover,
+[role='button'].button-secondary:hover {
+  border-color: var(--ferrun-color-muted);
+  color: var(--ferrun-color-text);
+}
+/* The whole label is a touch target; the checkbox keeps its usual size. */
+label:has(> input[type='checkbox']),
+label:has(> input[type='radio']) {
+  display: flex;
+  align-items: center;
+  gap: var(--ferrun-space-8);
+  min-block-size: var(--ferrun-control-size);
+}
+label:has(> input[type='checkbox']) > input,
+label:has(> input[type='radio']) > input {
+  margin: 0;
+  flex-shrink: 0;
+}
+input:not([type='checkbox']):not([type='radio']),
+select,
+textarea {
+  height: auto;
+  min-height: var(--ferrun-control-size);
+  font-size: var(--ferrun-text-body);
+  line-height: var(--ferrun-leading-body);
+  border-radius: var(--ferrun-radius-control);
+}
+summary,
+nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--ferrun-control-size);
+}
+nav[aria-label='Main navigation'] a {
+  color: var(--ferrun-color-muted);
+  text-decoration: none;
+}
+nav[aria-label='Main navigation'] a:hover {
+  color: var(--ferrun-color-text);
+}
+nav[aria-label='Main navigation'] a[aria-current='page'] {
+  color: var(--ferrun-color-text);
+  text-decoration: underline;
+  text-underline-offset: var(--ferrun-space-8);
+}
+.brand-logo {
+  display: block;
+  width: var(--ferrun-brand-width, 7.2rem);
+  height: var(--ferrun-brand-height, 2.5rem);
+  background-color: currentColor;
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+@media (forced-colors: active) {
+  .brand-logo {
+    forced-color-adjust: none;
+    background-color: CanvasText;
+  }
+}
+details > summary {
+  display: flex;
+  line-height: inherit;
+}
+.button-quiet {
+  border-color: transparent;
+  background: transparent;
+  color: var(--ferrun-color-muted);
+  box-shadow: none;
+  padding-inline: var(--ferrun-space-4);
+}
+.button-quiet:hover {
+  border-color: transparent;
+  color: var(--ferrun-color-text);
+  background: transparent;
+}
+a {
+  color: var(--ferrun-color-link);
+  text-underline-offset: var(--ferrun-space-4);
+}
+a:hover {
+  color: var(--ferrun-color-link-hover);
+}
+.text-action {
+  font-size: var(--ferrun-text-body);
+  line-height: var(--ferrun-leading-body);
+}
+:focus-visible {
+  outline: var(--ferrun-focus-width) solid var(--ferrun-color-link);
+  outline-offset: var(--ferrun-space-4);
+}
+
+/* Icon actions share target size, hover state and pressed treatment. */
+.icon-action {
+  display: inline-flex;
+}
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: var(--ferrun-control-size);
+  min-width: var(--ferrun-control-size);
+  min-height: var(--ferrun-control-size);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ferrun-color-muted);
+}
+.icon-button:hover {
+  background: var(--ferrun-color-surface-subtle);
+  color: var(--ferrun-color-text);
+}
+.icon-button[aria-pressed='true'] {
+  background: var(--ferrun-color-selection);
+  color: var(--ferrun-color-link);
+}
+.icon {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  flex: none;
+  vertical-align: -0.125em;
+}
+.icon > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.icon-button .icon {
+  width: var(--ferrun-space-16);
+  height: var(--ferrun-space-16);
+}
+.action-tooltip {
+  display: none;
+}
+
+.view-switcher {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-width: 0;
+  width: auto;
+  flex: 0 0 auto;
+  gap: var(--ferrun-space-4);
+  margin: 0;
+}
+.view-switcher > button {
+  width: auto;
+  flex: none;
+  margin: 0;
+}
+.view-switcher button[aria-pressed='false'] {
+  background: transparent;
+  border-color: var(--ferrun-color-border);
+  color: var(--ferrun-color-muted);
+}

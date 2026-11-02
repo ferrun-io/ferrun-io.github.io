@@ -6,17 +6,12 @@ Connections: The static pages and downloads.js share these navigation and downlo
 list styles.
 */
 
-/* Use the browser’s light colors and system fonts for the release pages. */
-:root {
-  color-scheme: light;
-  --inline-code-background: #f2f2f2;
-}
 body {
   max-width: 48rem;
   margin: 2rem auto;
   padding: 0 1rem;
-  font-family: system-ui, sans-serif;
-  line-height: 1.5;
+  font-family: var(--ferrun-font-sans);
+  line-height: var(--ferrun-line-height);
 }
 
 /* Keep navigation usable when enlarged text forces links onto another line. */
@@ -36,15 +31,16 @@ summary:focus-visible {
 
 /* Wrap displayed code without adding line breaks to the copied text. */
 code {
-  font-size: 0.9375rem;
+  font-size: var(--ferrun-text-body);
+  line-height: var(--ferrun-leading-body);
   overflow-wrap: anywhere;
 }
 
 /* Distinguish inline commands and filenames from the surrounding text. */
 :not(pre) > code {
-  background: var(--inline-code-background);
+  background: var(--ferrun-color-surface-subtle);
   padding: 0.1em 0.3em;
-  border-radius: 0.2em;
+  border-radius: var(--ferrun-radius-control);
 }
 pre {
   white-space: pre-wrap;
