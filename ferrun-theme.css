@@ -58,6 +58,7 @@ site and standalone log example load it through their own asset entry points.
   --ferrun-control-size: 40px;
   --ferrun-detail-width: 48rem;
   --ferrun-detail-field-basis: 12rem;
+  --ferrun-run-name-basis: 12rem;
   --ferrun-detail-source-height: 16rem;
   --ferrun-focus-width: 2px;
   --ferrun-prose-width: 50ch;
