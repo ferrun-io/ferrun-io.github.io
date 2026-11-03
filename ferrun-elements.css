@@ -400,6 +400,9 @@ a:hover {
   display: inline-flex;
 }
 .icon-button {
+  position: relative;
+  isolation: isolate;
+  border-radius: var(--ferrun-radius-control);
   display: inline-grid;
   place-items: center;
   width: var(--ferrun-control-size);
@@ -411,13 +414,27 @@ a:hover {
   background: transparent;
   color: var(--ferrun-color-muted);
 }
+.icon-button::before {
+  content: '';
+  position: absolute;
+  inset: var(--ferrun-space-4);
+  z-index: -1;
+  border-radius: var(--ferrun-radius-control);
+  background: transparent;
+}
 .icon-button:hover {
-  background: var(--ferrun-color-surface-subtle);
+  background: transparent;
   color: var(--ferrun-color-text);
 }
+.icon-button:hover::before {
+  background: var(--ferrun-color-surface-subtle);
+}
 .icon-button[aria-pressed='true'] {
-  background: var(--ferrun-color-selection);
+  background: transparent;
   color: var(--ferrun-color-link);
+}
+.icon-button[aria-pressed='true']::before {
+  background: var(--ferrun-color-selection);
 }
 .icon {
   display: inline-flex;
@@ -458,4 +475,87 @@ a:hover {
   background: transparent;
   border-color: var(--ferrun-color-border);
   color: var(--ferrun-color-muted);
+}
+
+/* Detail fields stay compact; source lists expand within their own viewport. */
+.detail-panel {
+  max-inline-size: min(100%, var(--ferrun-detail-width));
+  padding: var(--ferrun-space-12) var(--ferrun-space-16);
+  margin-block-end: var(--ferrun-space-16);
+  border-inline-start: var(--ferrun-border-width) solid var(--ferrun-color-border);
+}
+.detail-panel > * {
+  margin-block: 0;
+}
+.detail-panel > :empty {
+  display: none;
+}
+.detail-panel > * + * {
+  margin-block-start: var(--ferrun-space-16);
+}
+.detail-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, var(--ferrun-detail-field-basis)), 1fr)
+  );
+  gap: var(--ferrun-space-16) var(--ferrun-space-24);
+}
+.detail-field {
+  min-inline-size: 0;
+}
+.detail-field dt {
+  margin-block: 0 var(--ferrun-space-4);
+  color: var(--ferrun-color-muted);
+  font-size: var(--ferrun-text-secondary);
+  line-height: var(--ferrun-leading-secondary);
+  font-weight: normal;
+}
+.detail-field dd {
+  margin: 0;
+  font-size: var(--ferrun-text-body);
+  line-height: var(--ferrun-leading-body);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.detail-field-note {
+  display: block;
+  margin-block-start: var(--ferrun-space-4);
+  color: var(--ferrun-color-muted);
+  font-size: var(--ferrun-text-secondary);
+  line-height: var(--ferrun-leading-secondary);
+}
+.detail-message {
+  padding-inline-start: var(--ferrun-space-12);
+  border-inline-start: var(--ferrun-focus-width) solid var(--ferrun-color-warning);
+  font-size: var(--ferrun-text-body);
+  line-height: var(--ferrun-leading-body);
+}
+.detail-sources > summary {
+  display: flex;
+  align-items: center;
+  gap: var(--ferrun-space-8);
+  min-block-size: var(--ferrun-control-size);
+  font-size: var(--ferrun-text-body);
+  line-height: var(--ferrun-leading-body);
+  cursor: pointer;
+}
+.detail-sources > summary > span {
+  color: var(--ferrun-color-muted);
+  font: inherit;
+}
+.detail-sources > ul {
+  display: grid;
+  gap: var(--ferrun-space-8);
+  margin: 0;
+  padding: var(--ferrun-space-8) 0;
+  list-style: none;
+  max-block-size: var(--ferrun-detail-source-height);
+  overflow: auto;
+  scrollbar-color: var(--ferrun-color-muted) var(--ferrun-color-surface-subtle);
+}
+.detail-sources > ul > li {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: anywhere;
 }
