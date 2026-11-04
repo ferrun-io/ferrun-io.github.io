@@ -59,6 +59,10 @@ site and standalone log example load it through their own asset entry points.
   --ferrun-detail-width: 48rem;
   --ferrun-detail-field-basis: 12rem;
   --ferrun-run-name-basis: 12rem;
+  --ferrun-split-primary-min-rem: 12;
+  --ferrun-split-secondary-min-rem: 18;
+  --ferrun-waterfall-label-default: 55cqw;
+  --ferrun-waterfall-label-max: 44rem;
   --ferrun-detail-source-height: 16rem;
   --ferrun-focus-width: 2px;
   --ferrun-prose-width: 50ch;
