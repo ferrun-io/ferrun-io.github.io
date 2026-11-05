@@ -1,12 +1,12 @@
 {
   "v0.0.37": {
+    "ferrun-v0.0.37-x86_64-unknown-linux-gnu.tar.gz": 25351853,
     "ferrun-pipeline-0.0.37-x86_64-unknown-linux-gnu.tgz": 781375,
     "ferrun-v0.0.37-x86_64-unknown-linux-gnu": 12983096,
     "ferrun_pipeline-0.0.37-cp310-abi3-manylinux_2_34_x86_64.whl": 1187342,
-    "ferrun-v0.0.37-x86_64-unknown-linux-gnu.tar.gz": 25351853,
+    "ferrun-v0.0.37-x86_64-unknown-linux-gnu.tar.gz.sha256": 113,
     "ferrun-pipeline-0.0.37-x86_64-unknown-linux-gnu.tgz.sha256": 118,
     "ferrun-v0.0.37-x86_64-unknown-linux-gnu.sha256": 106,
-    "ferrun_pipeline-0.0.37-cp310-abi3-manylinux_2_34_x86_64.whl.sha256": 126,
-    "ferrun-v0.0.37-x86_64-unknown-linux-gnu.tar.gz.sha256": 113
+    "ferrun_pipeline-0.0.37-cp310-abi3-manylinux_2_34_x86_64.whl.sha256": 126
   }
 }
