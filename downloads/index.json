@@ -1,20 +1,12 @@
 {
-  "v0.0.30": {
-    "ferrun-v0.0.30-x86_64-unknown-linux-gnu.tar.gz": 23689847,
-    "ferrun-v0.0.30-x86_64-unknown-linux-gnu": 13017808,
-    "ferrun-v0.0.30-aarch64-unknown-linux-gnu.tar.gz": 23485179,
-    "ferrun-v0.0.30-aarch64-unknown-linux-gnu": 12077792,
-    "ferrun-pipeline-0.0.30-x86_64-unknown-linux-gnu.tgz": 781279,
-    "ferrun_pipeline-0.0.30-cp310-abi3-manylinux_2_34_aarch64.whl": 1115606,
-    "ferrun_pipeline-0.0.30-cp310-abi3-manylinux_2_34_x86_64.whl": 1184825,
-    "ferrun-pipeline-0.0.30-aarch64-unknown-linux-gnu.tgz": 708234,
-    "ferrun-v0.0.30-x86_64-unknown-linux-gnu.tar.gz.sha256": 113,
-    "ferrun-v0.0.30-x86_64-unknown-linux-gnu.sha256": 106,
-    "ferrun-v0.0.30-aarch64-unknown-linux-gnu.tar.gz.sha256": 114,
-    "ferrun-v0.0.30-aarch64-unknown-linux-gnu.sha256": 107,
-    "ferrun-pipeline-0.0.30-x86_64-unknown-linux-gnu.tgz.sha256": 118,
-    "ferrun_pipeline-0.0.30-cp310-abi3-manylinux_2_34_aarch64.whl.sha256": 127,
-    "ferrun_pipeline-0.0.30-cp310-abi3-manylinux_2_34_x86_64.whl.sha256": 126,
-    "ferrun-pipeline-0.0.30-aarch64-unknown-linux-gnu.tgz.sha256": 119
+  "v0.0.37": {
+    "ferrun-pipeline-0.0.37-x86_64-unknown-linux-gnu.tgz": 781375,
+    "ferrun-v0.0.37-x86_64-unknown-linux-gnu": 12983096,
+    "ferrun_pipeline-0.0.37-cp310-abi3-manylinux_2_34_x86_64.whl": 1187342,
+    "ferrun-v0.0.37-x86_64-unknown-linux-gnu.tar.gz": 25351853,
+    "ferrun-pipeline-0.0.37-x86_64-unknown-linux-gnu.tgz.sha256": 118,
+    "ferrun-v0.0.37-x86_64-unknown-linux-gnu.sha256": 106,
+    "ferrun_pipeline-0.0.37-cp310-abi3-manylinux_2_34_x86_64.whl.sha256": 126,
+    "ferrun-v0.0.37-x86_64-unknown-linux-gnu.tar.gz.sha256": 113
   }
 }

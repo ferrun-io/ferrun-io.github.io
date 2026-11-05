@@ -6,58 +6,31 @@
       {
         "components": [
           {
-            "bytes": 12077792,
-            "file": "ferrun-v0.0.30-aarch64-unknown-linux-gnu",
+            "bytes": 12983096,
+            "file": "ferrun-v0.0.37-x86_64-unknown-linux-gnu",
             "kind": "ferrun",
-            "sha256": "2af101320d1246d04bc885784b9d4f102ae59455870b3ddee48142b61372b69d"
+            "sha256": "1846264bd510494bf019dae6bf726c505bcee7cd708dbf86146dfb0866cfc4b9"
           },
           {
-            "bytes": 17465680,
-            "file": "executor-v0.0.30-aarch64-unknown-linux-gnu",
+            "bytes": 18907496,
+            "file": "executor-v0.0.37-x86_64-unknown-linux-gnu",
             "kind": "executor",
-            "sha256": "3c507a0c4805d9f801f05060b50ab4067b461936bfbf6d163449a45f508e4de7"
+            "sha256": "0fd83c37965946714629de5a244e8346685dcb953e72affb316257cdd4649ed5"
           },
           {
-            "bytes": 38291944,
-            "file": "control-plane-v0.0.30-aarch64-unknown-linux-gnu",
+            "bytes": 46962128,
+            "file": "control-plane-v0.0.37-x86_64-unknown-linux-gnu",
             "kind": "control-plane",
-            "sha256": "016531f21d5e947c0c9698c36e69a530ce9a2f361d65619d0db8d793f2110fde"
+            "sha256": "105474423355a959781aff2a6673b6e157c75ce48293b33f2357bf06122d5021"
           }
         ],
         "runner_version": "2.337.0",
-        "source_commit": "0345ca36bcaed3a1bc3756d5f251c1afd188bcdb",
-        "stable": true,
-        "target": "aarch64-unknown-linux-gnu",
-        "version": "0.0.30"
-      },
-      {
-        "components": [
-          {
-            "bytes": 13017808,
-            "file": "ferrun-v0.0.30-x86_64-unknown-linux-gnu",
-            "kind": "ferrun",
-            "sha256": "92ef1c7f6b531c6e0db108acea052959010d7b8f4caabd78bf12bd1d438758ce"
-          },
-          {
-            "bytes": 18584736,
-            "file": "executor-v0.0.30-x86_64-unknown-linux-gnu",
-            "kind": "executor",
-            "sha256": "7bf3ba5b3949f362cdc32706238d28d1962de6a9f5daab907345a9e0ebd3988a"
-          },
-          {
-            "bytes": 41191432,
-            "file": "control-plane-v0.0.30-x86_64-unknown-linux-gnu",
-            "kind": "control-plane",
-            "sha256": "ada74c4ffc19eeea141cdc5b9eef66e44dcddd5e5011c46f6ae8336be7adeabb"
-          }
-        ],
-        "runner_version": "2.337.0",
-        "source_commit": "0345ca36bcaed3a1bc3756d5f251c1afd188bcdb",
+        "source_commit": "37b580ffc1280cfc9225824bfe7b72300412d52d",
         "stable": true,
         "target": "x86_64-unknown-linux-gnu",
-        "version": "0.0.30"
+        "version": "0.0.37"
       }
     ]
   },
-  "signature": "GuEKOys3Ix4ra9n/ks7frMXHgPbISZm3mif2FguMoLjj4Cvft4ifujaYyMrCTa3g7RiDupjiWDVX117yYgEmRv6U4NJSIbabZXM6hhuOZSf+OnfRqMGaU4dz7q2CHHGuecqZmJ/d2dNDjlI3msvwEM43quykmHXyE2zfWDNkd48TCKLn7CSLcPz5go36Ly/P5/1ZINw5lrh1AV8SHy8zDGYY+Zi6I/fI1PSoyf7PtTNN7bOBdz7tnCw8++vAVN1VP5fh7Nf3UPOfb6dNzghJ29stv7RDR9eXMgRxz2bu8hiSds0qrPa63SJU05HvHqpuKlZzktHbW2dPEbAKH0vU8Q=="
+  "signature": "q+YLBD/paROlLKsYplB7UVYUsywfRq4O64EtibuiOgtTYVp4SvsJjfMAZ/rkjJ8XOBk9kNrJWHn1gBUCY454vSuZ0uTlKpkDft8JRaJOm2lm3DhVJ6frUDYLUtPA4e4/Hklc+M7j1ZUNJt4Lo9YfTqeKxAyMqfWu1Z+3RUjSg/2WHdJ53WsTn8xWdOCZEXhQuiG9yyhJ4EYYvG3RSNwJs2M39tEQnAC+wwc2x8QK5yaAdstRxQIJStqUziPs/q3+EGJIJ2tpVV3GjJTr2uxz3UK9CYxK3lutJ3P9LkYK4Mg1/bd7rmnHzLcW+ES13StfZFXuxq7dlZmrgzIj/gBImA=="
 }
