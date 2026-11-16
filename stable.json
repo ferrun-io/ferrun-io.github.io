@@ -6,31 +6,31 @@
       {
         "components": [
           {
-            "bytes": 12983096,
-            "file": "ferrun-v0.0.37-x86_64-unknown-linux-gnu",
+            "bytes": 14605904,
+            "file": "ferrun-v0.0.51-x86_64-unknown-linux-gnu",
             "kind": "ferrun",
-            "sha256": "1846264bd510494bf019dae6bf726c505bcee7cd708dbf86146dfb0866cfc4b9"
+            "sha256": "18daadb565deee1ffc67b6f75e75a89436dab3eb3798fa3b8b9ca2a7c9a21001"
           },
           {
-            "bytes": 18907496,
-            "file": "executor-v0.0.37-x86_64-unknown-linux-gnu",
+            "bytes": 20466240,
+            "file": "executor-v0.0.51-x86_64-unknown-linux-gnu",
             "kind": "executor",
-            "sha256": "0fd83c37965946714629de5a244e8346685dcb953e72affb316257cdd4649ed5"
+            "sha256": "e090a0eee1beea94489e60137ce799a7326abb433855f1fea1a04c97a97d7b79"
           },
           {
-            "bytes": 46962128,
-            "file": "control-plane-v0.0.37-x86_64-unknown-linux-gnu",
+            "bytes": 50378984,
+            "file": "control-plane-v0.0.51-x86_64-unknown-linux-gnu",
             "kind": "control-plane",
-            "sha256": "105474423355a959781aff2a6673b6e157c75ce48293b33f2357bf06122d5021"
+            "sha256": "5b303da961c99dbbc9dc07c8d54d9dee5dde2a939e0430b6845e51b55998c86d"
           }
         ],
         "runner_version": "2.337.0",
-        "source_commit": "37b580ffc1280cfc9225824bfe7b72300412d52d",
+        "source_commit": "1590cb70418cb07ca64b1dd612d9e1b2aeb36a7a",
         "stable": true,
         "target": "x86_64-unknown-linux-gnu",
-        "version": "0.0.37"
+        "version": "0.0.51"
       }
     ]
   },
-  "signature": "q+YLBD/paROlLKsYplB7UVYUsywfRq4O64EtibuiOgtTYVp4SvsJjfMAZ/rkjJ8XOBk9kNrJWHn1gBUCY454vSuZ0uTlKpkDft8JRaJOm2lm3DhVJ6frUDYLUtPA4e4/Hklc+M7j1ZUNJt4Lo9YfTqeKxAyMqfWu1Z+3RUjSg/2WHdJ53WsTn8xWdOCZEXhQuiG9yyhJ4EYYvG3RSNwJs2M39tEQnAC+wwc2x8QK5yaAdstRxQIJStqUziPs/q3+EGJIJ2tpVV3GjJTr2uxz3UK9CYxK3lutJ3P9LkYK4Mg1/bd7rmnHzLcW+ES13StfZFXuxq7dlZmrgzIj/gBImA=="
+  "signature": "RTz353zaFo5z1CYSmWiF/H3tTquSP3trhrsK1NP3ZvhM2ne4tsoMGVmh/76du4/fyt0EZXns28ANHr3e6GAVmr7UDAmmTl0FG3mMygCIDYjyYCj5NtdqKDT/XwO3EvYA4pkEy4OBjryDV5mSjmVfPc+vz1Rw6NFNqVPAf5iMaBuutxAPIKMDUfYFx/YTC4fjeQDMfv+u/sEIsXqUso/4ap3wKHKnMv+Ze+P/Lag8ot0nZyQgrIEWAXKUEKSLknZDjyVavWNsHVzDRphFv+HRYygisXoJRTDRS0EiSdhmIeiGkDUrYBulvorItguHAwdzbNB1B3IIeFAWNBHG0SDMxQ=="
 }
