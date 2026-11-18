@@ -273,6 +273,7 @@ button,
 input[type='button'],
 input[type='submit'],
 input[type='reset'],
+a.button-primary,
 [role='button'] {
   display: inline-flex;
   align-items: center;
@@ -291,6 +292,7 @@ input[type='reset'],
 }
 button:hover,
 input:is([type='button'], [type='submit'], [type='reset']):hover,
+a.button-primary:hover,
 [role='button']:hover {
   border-color: var(--ferrun-color-action-hover);
   background: var(--ferrun-color-action-hover);
