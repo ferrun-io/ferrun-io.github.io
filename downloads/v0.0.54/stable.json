@@ -1,0 +1,36 @@
+{
+  "algorithm": "RS256",
+  "payload": {
+    "format": 1,
+    "releases": [
+      {
+        "components": [
+          {
+            "bytes": 14601080,
+            "file": "ferrun-v0.0.54-x86_64-unknown-linux-gnu",
+            "kind": "ferrun",
+            "sha256": "077ab3bdedbeec6690c09ee35cee43b2e73a170b4d84e0e796422b384aaa0e87"
+          },
+          {
+            "bytes": 20467088,
+            "file": "executor-v0.0.54-x86_64-unknown-linux-gnu",
+            "kind": "executor",
+            "sha256": "5db67aa16a9a0a11bb749ae8d5b970ac3df090de3197b935e08e306734a15d6e"
+          },
+          {
+            "bytes": 50508160,
+            "file": "control-plane-v0.0.54-x86_64-unknown-linux-gnu",
+            "kind": "control-plane",
+            "sha256": "a39ee8835d1df38c5d69ee323712f4d787da44cfa31bd58494f40a906a18d990"
+          }
+        ],
+        "runner_version": "2.337.0",
+        "source_commit": "40cb0726788bdfd034562ff382f56f91f13a7198",
+        "stable": true,
+        "target": "x86_64-unknown-linux-gnu",
+        "version": "0.0.54"
+      }
+    ]
+  },
+  "signature": "HN82/AFuzSJ9Z+Q+kw28pIHXtD3kP2ZUKzcUVwjb+BhKSpUm/3S8YWwhs9raVUMchDbVK7qDv3I8ExyFUw0TwzNIhsFGOv7itQNwM41c1fHBDrFjJdo9/0zTE0ewenu9dQ86j8HNGAAP7qjeFKQd8XIx7ZiWiD31G6H2pLSY3eUqzALzLJG8N3+tih0ml2RUTegHixaOgf6LAs6vX7oLcCOAfhrrha9gupFcDVjOp8MnIyT1fMox1pXm8KvtEZgQB5C7qTPaonPCFRIvRk9UlmwkL7DKieRTyJZDBXrqtllwDejAYMH0z7eVAS2wvfHzQ7O6q5sS2aJkWfZiyB/Row=="
+}
